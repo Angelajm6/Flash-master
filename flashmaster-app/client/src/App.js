@@ -8,14 +8,25 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { Browser as Router, Routes, Route } from 'react-router-dom';
+import { Route, Navigate } from 'react-router-dom';
 
 import Home from './pages/Home';
-import Teacher from './pages/Teacher';
-import Student from './pages/Student';
+import Teacher from './pages/Teacher/Teacher';
+import Student from './pages/Student/Student';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Header from './components/Header';
 import Footer from './components/Footer';
+
+function ProtectedRoute({ element: Element, role }) {
+  const userRole = localStorage.getItem('role');
+  if (userRole !== role) {
+    return <Navigate to="/" />;
+  }
+  const Component = role === 'teacher' ? Teacher : Student;
+  return <Route element={<Component />} />;
+}
+
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -56,14 +67,20 @@ function App() {
                 path="/signup" 
                 element={<Signup />}
               />
-              <Route 
-                path="/me" 
-                element={<Teacher />}
+              
+              <ProtectedRoute 
+               path="/me" 
+               element={<Teacher />}
+               role="teacher"
               />
-              <Route 
+              
+              
+              <ProtectedRoute 
                 path="/me" 
                 element={<Student />}
+                role="student"
                 />
+              
               <Route 
                 path="/teachers/:teacherId"
                 element={<Teacher />}
