@@ -1,6 +1,7 @@
 [
 {
     "name": "Alberto Harrison",
+    "subject": "World Histrory",
     "id": 101,
     "auth": "T",
     "email": "aharrison@eaststate.edu",
@@ -8,6 +9,7 @@
 },
 {
     "name": "Abigail Carter",
+    "subject": "Classic Literature",
     "id": 102,
     "auth": "T",
     "email": "acarter@eaststate.edu",
@@ -15,93 +17,126 @@
 },
 {
     "name": "Allen Barber",
+    "subject": "Math",
     "id": 103,
     "auth": "T",
     "email": "abarber@eaststate.edu",
-    "flashDecks": ["Algebra 1", "Calculus 1", "Geometry", "", ""]
+    "flashDecks": ["Algebra 1", "Calculus 1", "Geometry", "Algebra 2", " AP Calculus"]
 },
 {
-    "name": "Alberto Harrison",
-    "id": 101,
+    "name": "Brenda Wang",
+    "subject": "Science",
+    "id": 104,
     "auth": "T",
-    "email": "aharrison@eaststate.edu",
-    "flashDecks": ["American Revolution", "Titanic", "Civil War", "The Boxer Rebellion", "WW1"]
+    "email": "bwang@eaststate.edu",
+    "flashDecks": ["Physics 1", "Biology", "Chemistry", "AP Chem", "AP Biology"]
 },
 {
-    "name": "Alberto Harrison",
-    "id": 101,
+    "name": "Betty Hansen",
+    "subject": "Writing",
+    "id": 105,
     "auth": "T",
-    "email": "aharrison@eaststate.edu",
-    "flashDecks": ["American Revolution", "Titanic", "Civil War", "The Boxer Rebellion", "WW1"]
+    "email": "bhansen@eaststate.edu",
+    "flashDecks": ["MLA Citation", "Grammar", "Sentence Structure", "Composition", "Research"]
 },
 {
-    "name": "Alberto Harrison",
-    "id": 101,
+    "name": "Cathy Johnson",
+    "subject": "Economics",
+    "id": 106,
     "auth": "T",
-    "email": "aharrison@eaststate.edu",
-    "flashDecks": ["American Revolution", "Titanic", "Civil War", "The Boxer Rebellion", "WW1"]
+    "email": "cjohnson@eaststate.edu",
+    "flashDecks": ["Supply & Demand", "Trickle Down Economics", "The Great Depression", "Inflation", "Economic Laws"]
 },
 {
-    "name": "Alberto Harrison",
-    "id": 101,
+    "name": "Cindy Rogers",
+    "subject": "French",
+    "id": 107,
     "auth": "T",
-    "email": "aharrison@eaststate.edu",
-    "flashDecks": ["American Revolution", "Titanic", "Civil War", "The Boxer Rebellion", "WW1"]
+    "email": "crogers@eaststate.edu",
+    "flashDecks": ["French Grammar", "Conjugations", "French Verbs", "French Adjectives", "Conversation"]
 },
 {
-    "name": "Alberto Harrison",
-    "id": 101,
+    "name": "Jack Webster",
+    "subject": "US Government",
+    "id": 108,
     "auth": "T",
-    "email": "aharrison@eaststate.edu",
-    "flashDecks": ["American Revolution", "Titanic", "Civil War", "The Boxer Rebellion", "WW1"]
+    "email": "jwebster@eaststate.edu",
+    "flashDecks": ["Constitutional Convention", "The Bill of Rights", "Separation of Powers", "Legislative Branch", "Judicial Branch"]
 },
 {
-    "name": "Alberto Harrison",
-    "id": 101,
+    "name": "Rob Williams",
+    "subject": "US Histrory",
+    "id": 109,
     "auth": "T",
-    "email": "aharrison@eaststate.edu",
-    "flashDecks": ["American Revolution", "Titanic", "Civil War", "The Boxer Rebellion", "WW1"]
+    "email": "rwilliams@eaststate.edu",
+    "flashDecks": ["Civil Rights", "Jim Crow", "Segragation", "Civil War", "Pearl Harbor"]
 },
 {
-    "name": "Alberto Harrison",
-    "id": 101,
+    "name": "Jenny Swift",
+    "subject": "Health",
+    "id": 110,
     "auth": "T",
-    "email": "aharrison@eaststate.edu",
-    "flashDecks": ["American Revolution", "Titanic", "Civil War", "The Boxer Rebellion", "WW1"]
+    "email": "jswift@eaststate.edu",
+    "flashDecks": ["Nutrition", "Disease", "Viruses", "Bacteria", "SexEd"]
 },
 {
-    "name": "Alberto Harrison",
-    "id": 101,
-    "auth": "T",
-    "email": "aharrison@eaststate.edu",
-    "flashDecks": ["American Revolution", "Titanic", "Civil War", "The Boxer Rebellion", "WW1"]
+    "name": "Tommy Pickles",
+    "id": 201,
+    "auth": "S",
+    "email": "tpickles@eaststate.edu"
 },
 {
-    "name": "Alberto Harrison",
-    "id": 101,
-    "auth": "T",
-    "email": "aharrison@eaststate.edu",
-    "flashDecks": ["American Revolution", "Titanic", "Civil War", "The Boxer Rebellion", "WW1"]
+    "name": "Dexter McPherson",
+    "id": 202,
+    "auth": "S",
+    "email": "dmcpherson@eaststate.edu"
 },
 {
-    "name": "Alberto Harrison",
-    "id": 101,
-    "auth": "T",
-    "email": "aharrison@eaststate.edu",
-    "flashDecks": ["American Revolution", "Titanic", "Civil War", "The Boxer Rebellion", "WW1"]
+    "name": "Jimmy Neutron",
+    "id": 203,
+    "auth": "S",
+    "email": "jneutron@eaststate.edu"
 },
 {
-    "name": "Alberto Harrison",
-    "id": 101,
-    "auth": "T",
-    "email": "aharrison@eaststate.edu",
-    "flashDecks": ["American Revolution", "Titanic", "Civil War", "The Boxer Rebellion", "WW1"]
+    "name": "Helga Pataki",
+    "id": 204,
+    "auth": "S",
+    "email": "hpataki@eaststate.edu"
 },
 {
-    "name": "Alberto Harrison",
-    "id": 101,
-    "auth": "T",
-    "email": "aharrison@eaststate.edu",
-    "flashDecks": ["American Revolution", "Titanic", "Civil War", "The Boxer Rebellion", "WW1"]
+    "name": "Harry Pottery",
+    "id": 205,
+    "auth": "S",
+    "email": "hpottery@eaststate.edu"
+},
+{
+    "name": "D.W. Read",
+    "id": 206,
+    "auth": "S",
+    "email": "dwread@eaststate.edu"
+},
+{
+    "name": "Louise Belcher",
+    "id": 207,
+    "auth": "S",
+    "email": "lbelcher@eaststate.edu"
+},
+{
+    "name": "Angelica Pickles",
+    "id": 208,
+    "auth": "S",
+    "email": "apickles@eaststate.edu"
+},
+{
+    "name": "Johnny Bravo",
+    "id": 209,
+    "auth": "S",
+    "email": "jbravo@eaststate.edu"
+},
+{
+    "name": "Charlie Brown",
+    "id": 210,
+    "auth": "S",
+    "email": "cbrown@eaststate.edu"
 }
 ]
