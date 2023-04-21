@@ -1,10 +1,11 @@
+require('dotenv').config();
 const axios = require("axios");
 
 const options = {
   method: 'GET',
   url: 'https://wordoftheday2.p.rapidapi.com/words/2020-03-25',
   headers: {
-    'X-RapidAPI-Key': Process.env.API_KEY,
+    'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
     'X-RapidAPI-Host': 'wordoftheday2.p.rapidapi.com'
   }
 };
