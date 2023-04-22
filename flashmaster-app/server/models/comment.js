@@ -17,11 +17,11 @@ const commentSchema = new Schema({
     createdAt: {
         type: Date,
         default: Date.now,
-        get: (timestamp) => dateFormat(timeStamp),
+        get: (timestamp) => dateFormat(timestamp),
     },
 
 });
 
-const Comment = model('Comment', commentSchema);
+const Comment = model('comment', commentSchema);
 
 module.exports = Comment;

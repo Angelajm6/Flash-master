@@ -1,6 +1,14 @@
 const { Schema, model } =require('mongoose');
 // const bcrypt = require('bcrypt');
 
+const roleSchema = new Schema({
+    name: String,
+    owner: [{
+        type: Schema.Types.ObjectId,
+        ref: 'user'
+    }]
+});
+
 const userSchema = new Schema({
     name: {
         type: String,
@@ -25,17 +33,24 @@ const userSchema = new Schema({
     comments: [
         {
             type: Schema.Types.ObjectId,
-            ref: 'Comment',
+            ref: 'comment',
         },
     ],
     flashDecks: [
         {
             type: Schema.Types.ObjectId,
+            ref: 'flash',
         },
     ],
-
+    roles: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "role",
+        },
+    ],
 });
 
-const User = model('User', userSchema);
+const User = model('user', userSchema);
+const Role = model('role', roleSchema);
 
-module.exports = User;
+module.exports = User,Role;
