@@ -3,7 +3,7 @@
     "name": "Alberto Harrison",
     "subject": "World Histrory",
     "id": 101,
-    "auth": "T",
+    "admin": "Teacher",
     "email": "aharrison@eaststate.edu",
     "flashDecks": ["American Revolution", "Titanic", "Civil War", "The Boxer Rebellion", "WW1"]
 },
@@ -11,7 +11,7 @@
     "name": "Abigail Carter",
     "subject": "Classic Literature",
     "id": 102,
-    "auth": "T",
+    "admin": "Teacher",
     "email": "acarter@eaststate.edu",
     "flashDecks": ["The Great Gatsby", "The Grapes of Wrath", "To Kill a Mockingbird", "Catcher in the Rye", "Little Women"]
 },
@@ -19,7 +19,7 @@
     "name": "Allen Barber",
     "subject": "Math",
     "id": 103,
-    "auth": "T",
+    "admin": "Teacher",
     "email": "abarber@eaststate.edu",
     "flashDecks": ["Algebra 1", "Calculus 1", "Geometry", "Algebra 2", " AP Calculus"]
 },
@@ -27,7 +27,7 @@
     "name": "Brenda Wang",
     "subject": "Science",
     "id": 104,
-    "auth": "T",
+    "admin": "Teacher",
     "email": "bwang@eaststate.edu",
     "flashDecks": ["Physics 1", "Biology", "Chemistry", "AP Chem", "AP Biology"]
 },
@@ -35,7 +35,7 @@
     "name": "Betty Hansen",
     "subject": "Writing",
     "id": 105,
-    "auth": "T",
+    "admin": "Teacher",
     "email": "bhansen@eaststate.edu",
     "flashDecks": ["MLA Citation", "Grammar", "Sentence Structure", "Composition", "Research"]
 },
@@ -43,7 +43,7 @@
     "name": "Cathy Johnson",
     "subject": "Economics",
     "id": 106,
-    "auth": "T",
+    "admin": "Teacher",
     "email": "cjohnson@eaststate.edu",
     "flashDecks": ["Supply & Demand", "Trickle Down Economics", "The Great Depression", "Inflation", "Economic Laws"]
 },
@@ -51,7 +51,7 @@
     "name": "Cindy Rogers",
     "subject": "French",
     "id": 107,
-    "auth": "T",
+    "admin": "Teacher",
     "email": "crogers@eaststate.edu",
     "flashDecks": ["French Grammar", "Conjugations", "French Verbs", "French Adjectives", "Conversation"]
 },
@@ -59,7 +59,7 @@
     "name": "Jack Webster",
     "subject": "US Government",
     "id": 108,
-    "auth": "T",
+    "admin": "Teacher",
     "email": "jwebster@eaststate.edu",
     "flashDecks": ["Constitutional Convention", "The Bill of Rights", "Separation of Powers", "Legislative Branch", "Judicial Branch"]
 },
@@ -67,7 +67,7 @@
     "name": "Rob Williams",
     "subject": "US Histrory",
     "id": 109,
-    "auth": "T",
+    "admin": "Teacher",
     "email": "rwilliams@eaststate.edu",
     "flashDecks": ["Civil Rights", "Jim Crow", "Segragation", "Civil War", "Pearl Harbor"]
 },
@@ -75,68 +75,68 @@
     "name": "Jenny Swift",
     "subject": "Health",
     "id": 110,
-    "auth": "T",
+    "admin": "Teacher",
     "email": "jswift@eaststate.edu",
     "flashDecks": ["Nutrition", "Disease", "Viruses", "Bacteria", "SexEd"]
 },
 {
     "name": "Tommy Pickles",
     "id": 201,
-    "auth": "S",
+    "admin": "Student",
     "email": "tpickles@eaststate.edu"
 },
 {
     "name": "Dexter McPherson",
     "id": 202,
-    "auth": "S",
+    "admin": "Student",
     "email": "dmcpherson@eaststate.edu"
 },
 {
     "name": "Jimmy Neutron",
     "id": 203,
-    "auth": "S",
+    "admin": "Student",
     "email": "jneutron@eaststate.edu"
 },
 {
     "name": "Helga Pataki",
     "id": 204,
-    "auth": "S",
+    "admin": "Student",
     "email": "hpataki@eaststate.edu"
 },
 {
     "name": "Harry Pottery",
     "id": 205,
-    "auth": "S",
+    "admin": "Student",
     "email": "hpottery@eaststate.edu"
 },
 {
     "name": "D.W. Read",
     "id": 206,
-    "auth": "S",
+    "admin": "Student",
     "email": "dwread@eaststate.edu"
 },
 {
     "name": "Louise Belcher",
     "id": 207,
-    "auth": "S",
+    "admin": "Student",
     "email": "lbelcher@eaststate.edu"
 },
 {
     "name": "Angelica Pickles",
     "id": 208,
-    "auth": "S",
+    "admin": "Student",
     "email": "apickles@eaststate.edu"
 },
 {
     "name": "Johnny Bravo",
     "id": 209,
-    "auth": "S",
+    "admin": "Student",
     "email": "jbravo@eaststate.edu"
 },
 {
     "name": "Charlie Brown",
     "id": 210,
-    "auth": "S",
+    "admin": "Student",
     "email": "cbrown@eaststate.edu"
 }
 ]
