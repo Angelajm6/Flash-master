@@ -10,15 +10,24 @@ const flashSchema = new Schema({
     flashAuthor: {
         type: String,
         required: true,
-        ref: 'User',
+        ref: 'user',
     },
     createdAt: {
         type: Date,
         default: Date.now,
         get: (timestamp) => dateFormat(timestamp),
     },
+    flashCard: [{}],
+    toJSON: {
+        virtuals: true,
+    },
+    id: false,
 });
 
-const Flash = model('Flash', flashSchema);
+flashSchema.virtual('cardCount').get(function () {
+    return this.flashCard.length;
+});
+
+const Flash = model('flash', flashSchema);
 
 module.exports = Flash;
