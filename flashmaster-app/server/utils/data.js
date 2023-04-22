@@ -6,6 +6,7 @@ const ROLE = {
   module.exports = {
     ROLE: ROLE,
     users: [
+    // Teachers
       { id: 101, name: "Alberto Harrison", role: ROLE.ADMIN },
       { id: 102, name: "Abigail Carter", role: ROLE.ADMIN },
       { id: 103, name: "Allen Barber", role: ROLE.ADMIN },
@@ -17,6 +18,7 @@ const ROLE = {
       { id: 109, name: "Rob Williams", role: ROLE.ADMIN },
       { id: 110, name: "Jenny Swift", role: ROLE.ADMIN },
       
+      // Students
       { id: 201, name: "Tommy Pickles", role: ROLE.BASIC },
       { id: 202, name: "Dexter McPherson", role: ROLE.BASIC },
       { id: 203, name: "Jimmy Neutron", role: ROLE.BASIC },
