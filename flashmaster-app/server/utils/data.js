@@ -16,15 +16,17 @@ const ROLE = {
       { id: 108, name: "Jack Webster", role: ROLE.ADMIN },
       { id: 109, name: "Rob Williams", role: ROLE.ADMIN },
       { id: 110, name: "Jenny Swift", role: ROLE.ADMIN },
-      { id: 3, name: 'Joe', role: ROLE.BASIC }
-      { id: 3, name: 'Joe', role: ROLE.BASIC }
-      { id: 3, name: 'Joe', role: ROLE.BASIC }
-      { id: 3, name: 'Joe', role: ROLE.BASIC }
-      { id: 3, name: 'Joe', role: ROLE.BASIC }
-      { id: 3, name: 'Joe', role: ROLE.BASIC }
-      { id: 3, name: 'Joe', role: ROLE.BASIC }
-      { id: 3, name: 'Joe', role: ROLE.BASIC }
-      { id: 3, name: 'Joe', role: ROLE.BASIC }
+      
+      { id: 201, name: "Tommy Pickles", role: ROLE.BASIC },
+      { id: 202, name: "Dexter McPherson", role: ROLE.BASIC },
+      { id: 203, name: "Jimmy Neutron", role: ROLE.BASIC },
+      { id: 204, name: "Helga Pataki", role: ROLE.BASIC },
+      { id: 205, name: "Harry Pottery", role: ROLE.BASIC },
+      { id: 206, name: "D.W. Read", role: ROLE.BASIC },
+      { id: 207, name: "Louise Belcher", role: ROLE.BASIC },
+      { id: 208, name: "Angelica Pickles", role: ROLE.BASIC },
+      { id: 209, name: "Johnny Bravo", role: ROLE.BASIC },
+      { id: 210, name: "Charlie Brown", role: ROLE.BASIC }
     ],
     projects: [
       { id: 1, name: "Kyle's Project", userId: 1 },
