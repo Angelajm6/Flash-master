@@ -9,15 +9,15 @@ app.use(setUser)
 app.use('/projects', projectRouter)
 
 app.get('/', (req, res) => {
-  res.send('Home Page')
+  res.send('Home')
 })
 
-app.get('/dashboard', authUser, (req, res) => {
-  res.send('Dashboard Page')
+app.get('/portal', authUser, (req, res) => {
+  res.send('Student Portal')
 })
 
-app.get('/admin', authUser, authRole(ROLE.ADMIN), (req, res) => {
-  res.send('Admin Page')
+app.get('/teacher', authUser, authRole(ROLE.ADMIN), (req, res) => {
+  res.send('Teacher Portal')
 })
 
 function setUser(req, res, next) {
