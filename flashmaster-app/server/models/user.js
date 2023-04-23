@@ -1,6 +1,8 @@
 const { Schema, model } =require('mongoose');
 // const bcrypt = require('bcrypt');
 
+
+// Schema to set role as either 'Student' or 'Teacher' so we can give the teachers an admin-like role.
 const roleSchema = new Schema({
     name: String,
     owner: [{
