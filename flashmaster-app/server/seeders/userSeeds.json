@@ -65,11 +65,11 @@
 },
 {
     "name": "Rob Williams",
-    "subject": "US Histrory",
+    "subject": "US History",
     "id": 109,
     "admin": "Teacher",
     "email": "rwilliams@eaststate.edu",
-    "flashDecks": ["Civil Rights", "Jim Crow", "Segragation", "Civil War", "Pearl Harbor"]
+    "flashDecks": ["Civil Rights", "Jim Crow", "Segregation", "Civil War", "Pearl Harbor"]
 },
 {
     "name": "Jenny Swift",
@@ -104,10 +104,10 @@
     "email": "hpataki@eaststate.edu"
 },
 {
-    "name": "Harry Pottery",
+    "name": "Harry Potter",
     "id": 205,
     "admin": "Student",
-    "email": "hpottery@eaststate.edu"
+    "email": "hpotter@eaststate.edu"
 },
 {
     "name": "D.W. Read",

@@ -23,13 +23,15 @@ const ROLE = {
       { id: 202, name: "Dexter McPherson", role: ROLE.BASIC },
       { id: 203, name: "Jimmy Neutron", role: ROLE.BASIC },
       { id: 204, name: "Helga Pataki", role: ROLE.BASIC },
-      { id: 205, name: "Harry Pottery", role: ROLE.BASIC },
+      { id: 205, name: "Harry Potter", role: ROLE.BASIC },
       { id: 206, name: "D.W. Read", role: ROLE.BASIC },
       { id: 207, name: "Louise Belcher", role: ROLE.BASIC },
       { id: 208, name: "Angelica Pickles", role: ROLE.BASIC },
       { id: 209, name: "Johnny Bravo", role: ROLE.BASIC },
       { id: 210, name: "Charlie Brown", role: ROLE.BASIC }
     ],
+
+    // Flash decks 
     projects: [
       { id: 1, name: "Kyle's Project", userId: 1 },
       { id: 2, name: "Sally's Project", userId: 2 },
