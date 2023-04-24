@@ -42,13 +42,13 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    addUser(username: String!, email: String!, password: String!): Auth
+    addUser(name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addComment(
       commentId: ID!  
       commentText: String!
       commentAuthor: String!)
-    addFlashDeck(String!)  
+    addFlashDeck(flashName: String!, flashAuthor: String!, createdAt: String)  
   }
 `;
 
