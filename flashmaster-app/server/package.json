@@ -1,0 +1,31 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node seeds/seed.js",
+    "watch": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Angelajm6/Flash-master.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^3.6.2",
+    "express": "^4.17.2",
+    "graphql": "^16.3.0",
+    "mongoose": "^6.9.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "bugs": {
+    "url": "https://github.com/Angelajm6/Flash-master/issues"
+  },
+  "homepage": "https://github.com/Angelajm6/Flash-master#readme"
+}

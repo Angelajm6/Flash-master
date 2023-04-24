@@ -1,142 +1,162 @@
 [
-{
-    "name": "Alberto Harrison",
-    "subject": "World Histrory",
-    "id": 101,
-    "auth": "T",
-    "email": "aharrison@eaststate.edu",
-    "flashDecks": ["American Revolution", "Titanic", "Civil War", "The Boxer Rebellion", "WW1"]
-},
-{
-    "name": "Abigail Carter",
-    "subject": "Classic Literature",
-    "id": 102,
-    "auth": "T",
-    "email": "acarter@eaststate.edu",
-    "flashDecks": ["The Great Gatsby", "The Grapes of Wrath", "To Kill a Mockingbird", "Catcher in the Rye", "Little Women"]
-},
-{
-    "name": "Allen Barber",
-    "subject": "Math",
-    "id": 103,
-    "auth": "T",
-    "email": "abarber@eaststate.edu",
-    "flashDecks": ["Algebra 1", "Calculus 1", "Geometry", "Algebra 2", " AP Calculus"]
-},
-{
-    "name": "Brenda Wang",
-    "subject": "Science",
-    "id": 104,
-    "auth": "T",
-    "email": "bwang@eaststate.edu",
-    "flashDecks": ["Physics 1", "Biology", "Chemistry", "AP Chem", "AP Biology"]
-},
-{
-    "name": "Betty Hansen",
-    "subject": "Writing",
-    "id": 105,
-    "auth": "T",
-    "email": "bhansen@eaststate.edu",
-    "flashDecks": ["MLA Citation", "Grammar", "Sentence Structure", "Composition", "Research"]
-},
-{
-    "name": "Cathy Johnson",
-    "subject": "Economics",
-    "id": 106,
-    "auth": "T",
-    "email": "cjohnson@eaststate.edu",
-    "flashDecks": ["Supply & Demand", "Trickle Down Economics", "The Great Depression", "Inflation", "Economic Laws"]
-},
-{
-    "name": "Cindy Rogers",
-    "subject": "French",
-    "id": 107,
-    "auth": "T",
-    "email": "crogers@eaststate.edu",
-    "flashDecks": ["French Grammar", "Conjugations", "French Verbs", "French Adjectives", "Conversation"]
-},
-{
-    "name": "Jack Webster",
-    "subject": "US Government",
-    "id": 108,
-    "auth": "T",
-    "email": "jwebster@eaststate.edu",
-    "flashDecks": ["Constitutional Convention", "The Bill of Rights", "Separation of Powers", "Legislative Branch", "Judicial Branch"]
-},
-{
-    "name": "Rob Williams",
-    "subject": "US Histrory",
-    "id": 109,
-    "auth": "T",
-    "email": "rwilliams@eaststate.edu",
-    "flashDecks": ["Civil Rights", "Jim Crow", "Segragation", "Civil War", "Pearl Harbor"]
-},
-{
-    "name": "Jenny Swift",
-    "subject": "Health",
-    "id": 110,
-    "auth": "T",
-    "email": "jswift@eaststate.edu",
-    "flashDecks": ["Nutrition", "Disease", "Viruses", "Bacteria", "SexEd"]
-},
-{
-    "name": "Tommy Pickles",
-    "id": 201,
-    "auth": "S",
-    "email": "tpickles@eaststate.edu"
-},
-{
-    "name": "Dexter McPherson",
-    "id": 202,
-    "auth": "S",
-    "email": "dmcpherson@eaststate.edu"
-},
-{
-    "name": "Jimmy Neutron",
-    "id": 203,
-    "auth": "S",
-    "email": "jneutron@eaststate.edu"
-},
-{
-    "name": "Helga Pataki",
-    "id": 204,
-    "auth": "S",
-    "email": "hpataki@eaststate.edu"
-},
-{
-    "name": "Harry Pottery",
-    "id": 205,
-    "auth": "S",
-    "email": "hpottery@eaststate.edu"
-},
-{
-    "name": "D.W. Read",
-    "id": 206,
-    "auth": "S",
-    "email": "dwread@eaststate.edu"
-},
-{
-    "name": "Louise Belcher",
-    "id": 207,
-    "auth": "S",
-    "email": "lbelcher@eaststate.edu"
-},
-{
-    "name": "Angelica Pickles",
-    "id": 208,
-    "auth": "S",
-    "email": "apickles@eaststate.edu"
-},
-{
-    "name": "Johnny Bravo",
-    "id": 209,
-    "auth": "S",
-    "email": "jbravo@eaststate.edu"
-},
-{
-    "name": "Charlie Brown",
-    "id": 210,
-    "auth": "S",
-    "email": "cbrown@eaststate.edu"
-}
-]
+    {
+        "name": "Alberto Harrison",
+        "subject": "World History",
+        "id": 101,
+        "role": "admin",
+        "email": "aharrison@eaststate.edu",
+        "password": "Harrison101",
+        "flashDecks": ["American Revolution", "Titanic", "Civil War", "The Boxer Rebellion", "WW1"]
+    },
+    {
+        "name": "Abigail Carter",
+        "subject": "Classic Literature",
+        "id": 102,
+        "role": "admin",
+        "email": "acarter@eaststate.edu",
+        "password": "Carter102",
+        "flashDecks": ["The Great Gatsby", "The Grapes of Wrath", "To Kill a Mockingbird", "Catcher in the Rye", "Little Women"]
+    },
+    {
+        "name": "Allen Barber",
+        "subject": "Math",
+        "id": 103,
+        "role": "admin",
+        "email": "abarber@eaststate.edu",
+        "password": "Barber103",
+        "flashDecks": ["Algebra 1", "Calculus 1", "Geometry", "Algebra 2", " AP Calculus"]
+    },
+    {
+        "name": "Brenda Wang",
+        "subject": "Science",
+        "id": 104,
+        "role": "admin",
+        "email": "bwang@eaststate.edu",
+        "password": "Wang103",
+        "flashDecks": ["Physics 1", "Biology", "Chemistry", "AP Chem", "AP Biology"]
+    },
+    {
+        "name": "Betty Hansen",
+        "subject": "Writing",
+        "id": 105,
+        "role": "admin",
+        "email": "bhansen@eaststate.edu",
+        "password": "Hansen105",
+        "flashDecks": ["MLA Citation", "Grammar", "Sentence Structure", "Composition", "Research"]
+    },
+    {
+        "name": "Cathy Johnson",
+        "subject": "Economics",
+        "id": 106,
+        "role": "admin",
+        "email": "cjohnson@eaststate.edu",
+        "password": "Johnson106",
+        "flashDecks": ["Supply & Demand", "Trickle Down Economics", "The Great Depression", "Inflation", "Economic Laws"]
+    },
+    {
+        "name": "Cindy Rogers",
+        "subject": "French",
+        "id": 107,
+        "role": "admin",
+        "email": "crogers@eaststate.edu",
+        "password": "Rogers107",
+        "flashDecks": ["French Grammar", "Conjugations", "French Verbs", "French Adjectives", "Conversation"]
+    },
+    {
+        "name": "Jack Webster",
+        "subject": "US Government",
+        "id": 108,
+        "role": "admin",
+        "email": "jwebster@eaststate.edu",
+        "password": "Webster108",
+        "flashDecks": ["Constitutional Convention", "The Bill of Rights", "Separation of Powers", "Legislative Branch", "Judicial Branch"]
+    },
+    {
+        "name": "Rob Williams",
+        "subject": "US History",
+        "id": 109,
+        "role": "admin",
+        "email": "rwilliams@eaststate.edu",
+        "password": "Williams109",
+        "flashDecks": ["Civil Rights", "Jim Crow", "Segregation", "Civil War", "Pearl Harbor"]
+    },
+    {
+        "name": "Jenny Swift",
+        "subject": "Health",
+        "id": 110,
+        "role": "admin",
+        "email": "jswift@eaststate.edu",
+        "password": "Swift110",
+        "flashDecks": ["Nutrition", "Disease", "Viruses", "Bacteria", "SexEd"]
+    },
+    {
+        "name": "Tommy Pickles",
+        "id": 201,
+        "role": "basic",
+        "email": "tpickles@eaststate.edu",
+        "password": "Tpickles201"
+    },
+    {
+        "name": "Dexter McPherson",
+        "id": 202,
+        "role": "basic",
+        "email": "dmcpherson@eaststate.edu",
+        "password": "Mcpherson202"
+    },
+    {
+        "name": "Jimmy Neutron",
+        "id": 203,
+        "role": "basic",
+        "email": "jneutron@eaststate.edu",
+        "password": "Neutron203"
+    },
+    {
+        "name": "Helga Pataki",
+        "id": 204,
+        "role": "basic",
+        "email": "hpataki@eaststate.edu",
+        "password": "Pataki204"
+    },
+    {
+        "name": "Harry Potter",
+        "id": 205,
+        "role": "basic",
+        "email": "hpotter@eaststate.edu",
+        "password": "Potter205"
+    },
+    {
+        "name": "D.W. Read",
+        "id": 206,
+        "role": "basic",
+        "email": "dwread@eaststate.edu",
+        "password": "Read206"
+    },
+    {
+        "name": "Louise Belcher",
+        "id": 207,
+        "role": "basic",
+        "email": "lbelcher@eaststate.edu",
+        "password": "Belcher207"
+    },
+    {
+        "name": "Angelica Pickles",
+        "id": 208,
+        "role": "basic",
+        "email": "apickles@eaststate.edu",
+        "password": "Apickles208"
+    },
+    {
+        "name": "Johnny Bravo",
+        "id": 209,
+        "role": "basic",
+        "email": "jbravo@eaststate.edu",
+        "password": "Bravo209"
+    },
+    {
+        "name": "Charlie Brown",
+        "id": 210,
+        "role": "basic",
+        "email": "cbrown@eaststate.edu",
+        "password": "Brown210"
+    }
+    ]
