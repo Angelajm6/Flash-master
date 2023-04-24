@@ -1,4 +1,5 @@
 import { gql } from '@apollo/client';
+import { authorizedbuyersmarketplace } from 'googleapis/build/src/apis/authorizedbuyersmarketplace';
 
 export const QUERY_USERS =  gql`
 query allUsers {
@@ -10,6 +11,18 @@ query allUsers {
   }
 }
 `;
+export const QUERY_FLASHDECK =  gql`
+query allUsers {
+  Flashdeck {
+    _id
+    topic
+    author
+    createdAt
+    comments
+  }
+}
+`;
+
 
 export const QUERY_SINGLE_USER =  gql`
 query singleUser($userId: ID!)  {
