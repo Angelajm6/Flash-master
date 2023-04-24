@@ -3,6 +3,10 @@ const { Schema, model } =require('mongoose');
 
 
 // Schema to set role as either 'Student' or 'Teacher' so we can give the teachers an admin-like role.
+<<<<<<< HEAD
+=======
+
+>>>>>>> c563bd446386bedeaa639f65a853382f01362305
 const roleSchema = new Schema({
     name: String,
     owner: [{
