@@ -18,10 +18,21 @@ const typeDefs = gql`
     createdAt: String
   }
 
+  type Flashdeck {
+    _id: ID
+    topic: String
+    author: String
+    createdAt: String
+    comments: [String]!
+  }
+
   type Auth {
     token: ID!
     user: User
   }
+
+
+  Work in Progress>>
 
   type Query {
     users: [User]
