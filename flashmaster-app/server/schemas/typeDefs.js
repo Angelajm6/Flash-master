@@ -2,7 +2,7 @@ const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
   type User {
-    name: Sring
+    name: String
     subject: String
     _id: ID
     email: String
@@ -18,10 +18,21 @@ const typeDefs = gql`
     createdAt: String
   }
 
+  type Flashdeck {
+    _id: ID
+    topic: String
+    author: String
+    createdAt: String
+    comments: [String]!
+  }
+
   type Auth {
     token: ID!
     user: User
   }
+
+
+  Work in Progress>>
 
   type Query {
     users: [User]
