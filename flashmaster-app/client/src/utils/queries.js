@@ -29,7 +29,13 @@ query singleUser($userId: ID!)  {
   user(userId: $userId) {
     _id
     name
-    flashDecks
+    flashDecks {
+      _id
+      topic
+      author
+      createdAt
+      comments
+    }
   }
 }
 `;
