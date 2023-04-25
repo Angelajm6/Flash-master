@@ -2,9 +2,14 @@ import React from 'react'
 import FlashCardList from './FlashCardList'
 
 export default function index() {
+    const [flashcards, setFlashcards] = useState(SAMPLE_FLASHCARDS)
 
+    const questionEl = useRef()
+    const answerEl = useRef()
 
+    useEffect(() => {
 
+    })
 
 function handleSubmit(e) {
     e.preventDefault()
@@ -14,6 +19,7 @@ function handleSubmit(e) {
 
     <>
     {/* Adds the flashcard creation form */}
+    {/* Needs conditional to only appear if the creator of the deck, or on a blank deck */}
         <form className="header" onSubmit={handleSubmit}>
             <div className="form-group">
                 <label htmlForm="question" ref={questionEl}>Question</label>
