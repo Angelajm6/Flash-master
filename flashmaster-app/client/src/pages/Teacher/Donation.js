@@ -14,7 +14,7 @@ function Teacher(props) {
     setDonationAmount(event.target.value);
   }
 
-  // HandleDonationSubmit function is called When the user submits the form
+ // HandleDonationSubmit function is called When the user submits the form
   const handleDonationSubmit = (event) => {
     event.preventDefault();
     
