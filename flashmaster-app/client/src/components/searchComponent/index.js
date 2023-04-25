@@ -5,8 +5,6 @@ import { QUERY_SINGLE_USER } from '../../utils/queries';
 import { QUERY_FLASHDECK } from '../../utils/queries';
 import { Link } from 'react-router-dom';
 
-
-
 const Searchbar = () => {
     const [search, setSearch] = useState('');
     const [result, setResult] = useState([]);
