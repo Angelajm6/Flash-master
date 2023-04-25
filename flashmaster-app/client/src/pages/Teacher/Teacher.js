@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
+<<<<<<< HEAD
 import Auth from '../utils/auth';
 
 import React from 'react';
@@ -63,3 +64,6 @@ const TeacherPortal = ({ match }: RouteComponentProps<MatchParams>) =>{
 
 
 export default TeacherPortal;
+=======
+import Auth from '../utils/auth';
+>>>>>>> 1a4ce2f3 (minor changes in READme file)
