@@ -57,4 +57,8 @@
 
 
 
+<<<<<<< HEAD
 // export default TeacherPortal;
+=======
+export default TeacherPortal;
+>>>>>>> main

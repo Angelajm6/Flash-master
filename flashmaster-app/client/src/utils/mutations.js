@@ -13,6 +13,17 @@ export const ADD_USER = gql`
     }
   }
 `;
+export const LOGIN_USER = gql`
+  mutation login($email: String!, $password: String!) {
+    login(email: $email, password: $password) {
+      token
+      profile {
+        _id
+        name
+      }
+    }
+  }
+`;
 
 export const ADD_COMMENT = gql`
   mutation addComment($userId: ID!, $name: String!, $comment: String!) {
@@ -101,4 +112,13 @@ export const REMOVE_FLASHDECK = gql`
       flashdeck
     }
   }
+`;
+
+export const LOGIN_USER = gql`
+mutation loginUser($email: String!, $password: String!) {
+  loginUser(email: $email, password: $password) {
+    email
+    password
+  }
+}
 `;
