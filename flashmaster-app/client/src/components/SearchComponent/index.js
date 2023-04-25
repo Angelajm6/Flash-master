@@ -28,7 +28,7 @@ function SearchBar() {
                         )}
                         {myProfileData && (
                             <ul>
-                                {flashdeckData.users.map((user) => (
+                                {flashdeckData.users.map((flashdeck) => (
                                     <li key={flashdeck._id}>{flashdeck.topic}{flashdeck.author}{flashdeck.comments}</li>
                                 ))}
                             </ul>
