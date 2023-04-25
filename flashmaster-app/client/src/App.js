@@ -1,4 +1,3 @@
-
 import React from 'react';
 import './App.css';
 import {
@@ -9,7 +8,7 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Navigate } from 'react-router-dom';
+
 
 import Home from './pages/Home';
 import Teacher from './pages/Teacher/Teacher';
@@ -18,11 +17,12 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { Route } from 'react-router-dom';
 
 function ProtectedRoute({ element: Element, role }) {
   const userRole = localStorage.getItem('role');
   if (userRole !== role) {
-    return <Navigate to="/" />;
+    return <Route to="/" />;
   }
   const Component = role === 'teacher' ? Teacher : Student;
   return <Route element={<Component />} />;
@@ -51,11 +51,11 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <Router>
+      <Route>
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
           <div className="container">
-            <Routes>
+            <Route>
               <Route 
                 path="/" 
                 element={<Home />}
@@ -90,11 +90,11 @@ function App() {
               path="/students/:studentId"
               element={<Student />}
               />
-            </Routes>
+            </Route>
           </div>
           <Footer />
         </div>
-      </Router>
+      </Route>
     </ApolloProvider>
   );
 }

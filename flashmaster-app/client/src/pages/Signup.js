@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { gql, useMutation } from '@apollo/client';
+<<<<<<< HEAD
+=======
+import { ADD_USER } from '../utils/mutations';
+>>>>>>> a5d91ae3e76572e4827b7fa95d7231e8bc33e128
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
 
@@ -12,7 +16,11 @@ const SignUp = () => {
     role: 'Teacher',
   });
 
+<<<<<<< HEAD
   const [addProfile, { error, data }] = useMutation(ADD_USER);
+=======
+  const [addUser, { error, data }] = useMutation(ADD_USER);
+>>>>>>> a5d91ae3e76572e4827b7fa95d7231e8bc33e128
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -28,7 +36,7 @@ const SignUp = () => {
     console.log(formState);
 
     try {
-      const { data } = await addProfile({
+      const { data } = await addUser({
         variable: { ...formState },
       });
 
