@@ -4,8 +4,6 @@ import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 
-
-
 //React hooks to manage state.
 function Teacher(props) {
   const [donationAmount, setDonationAmount] = useState(0);
