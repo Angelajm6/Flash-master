@@ -5,11 +5,16 @@ import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 
 
-const Donate = () => {
-    return (
-        <div name='Donate' className='w-full h-screen'>
 
-            
-        </div>
-    )
+//React hooks to manage state.
+function Teacher(props) {
+  const [donationAmount, setDonationAmount] = useState(0);
+
+  // HandleDonationChange function updates the donationAmount state when the user enters a donation amount
+  const handleDonationChange = (event) => {
+    setDonationAmount(event.target.value);
+  }
+
 }
+
+export default Teacher;
