@@ -1,11 +1,12 @@
 import React from 'react';
+import { gql, useQuery } from '@apollo/client';
 import Header from '../../components/Header/index';
-import Gallery from '';
-import Donation from '';
+import Gallery from '../Teacher/Gallery';
+import Donation from '../Teacher/Donation';
 
-
-import CommentList from '../../components/CommentList/CommentList';
-import CommentForm from '../../components/CommentForm/CommentForm';
+import { QUERY_USERS } from '../../utils/queries';
+import CommentList from '../../components/commentList/CommentList';
+import CommentForm from '../../components/CommentForm/index';
 import Login from '../Login';
 
 
@@ -16,23 +17,23 @@ import { QUERY_USER } from '../../utils/queries';
 
 // If user is admin, props passed from home page to Teacher Portal page.
 const StudentPortal = ({ match }: RouteComponentProps<MatchParams>) =>{
-    const { data, loading, error } =useQuery(User, {
-        variables: {
-            id: match.params.id
-        }
-    });
+    //const { data, loading, error } =useQuery(User, {
+        //variables: {
+          //  id: match.params.id
+       // }
+   // });
 
     return (
     <>
         <Header></Header>
-            <h2>Welcome, {user.name}</h2>
-            <card className="Gallery"><Collections></Collections>
+            {/*<h2>Welcome, {user.name}</h2>*/}
+            {/*<card className="Gallery"><Collections></Collections>*/}
                 <ul className="list-group">
-                {props.results.map((result) => (
-                    <li className="list-group-item" key={result.flashDecks}></li>
-                ))}
+                {/*{props.results.map((result) => (*/}
+                    {/*<li className="list-group-item" key={result.flashDecks}></li>*/}
+               {/*} ))}*/}
                 </ul>
-            </card>
+            {/*</card>*/}
         
 
             
