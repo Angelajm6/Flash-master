@@ -8,11 +8,11 @@ import Auth from '../utils/auth';
 function Teacher(props) {
   const [donationAmount, setDonationAmount] = useState(0);
 
-
 // HandleDonationChange function updates the donationAmount state when the user enters a donation amount
   const handleDonationChange = (event) => {
     setDonationAmount(event.target.value);
   }
+
 
  // HandleDonationSubmit function is called When the user submits the form
   const handleDonationSubmit = (event) => {
