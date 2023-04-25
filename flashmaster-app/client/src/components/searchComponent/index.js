@@ -1,45 +1,67 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
 import { useQuery } from '@apollo/client';
+import { QUERY_SINGLE_USER } from '../../utils/queries';
+import { QUERY_FLASHDECK } from '../../utils/queries';
+import { Link } from 'react-router-dom';
 
-import { QUERY_SINGLE_USER, QUERY_FLASHDECK } from '../../utils/queries';
 
-function SearchBar() {
-    const [searchTerm, setSearchTerm] = useState('');
-    const [searchUser, { data: usersData }] = useQuery(QUERY_SINGLE_USER);
-    const [searchTopic, { data: flashdeckData }] = useQuery(QUERY_FLASHDECK);
 
-    const handleSearch = (event) => {
-        event.preventDefault();
-        searchUser({ variables: { name: searchTerm } });
-        searchTopic({ variables: { name: searchTerm } });
+const Searchbar = () => {
+    const [search, setSearch] = useState('');
+    const [result, setResult] = useState([]);
+    const { loading, data } = useQuery(QUERY_SINGLE_USER, QUERY_FLASHDECK);
+    const users = data?.users || [];
+    const flashdecks = data?.flashdecks || [];
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        const searchedUsers = users.filter((user) => {
+            return user.name.toLowerCase().includes(search.toLowerCase())
+        });
+        const searchedFlashdecks = flashdecks.filter((flashdeck) => {
+            return flashdeck.topic.toLowerCase().includes(search.toLowerCase())
+        });
+        const searchedResults = [...searchedUsers, ...searchedFlashdecks];
+        setResult(searchedResults);
     };
+
+
     return (
-        <div className="search">
-            <div className="searchInputs">
-                <form onSubmit={handleSearch}>
-                    <input type="text" placeholder='Search!' value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)}>
-                        <button type="submit">Search</button>
-                        {usersData && (
-                            <ul>
-                                {usersData.users.map((user) => {
-                                    <li key={user._id}>{user.name}</li>
-                                })}
-                            </ul>
-                        )}
-                        {myProfileData && (
-                            <ul>
-                                {flashdeckData.users.map((flashdeck) => (
-                                    <li key={flashdeck._id}>{flashdeck.topic}{flashdeck.author}{flashdeck.comments}</li>
-                                ))}
-                            </ul>
-                        )}
-                    </input>
-                </form>
-            </div>
+        <div>
+            <form onSubmit={handleSearch}>
+                <input
+                    type="text"
+                    placeholder="Search For A Topic"
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                />
+                <button type="submit">Search</button>
+            </form>
+            {loading ? (
+                <div>Loading...</div>
+            ) : (
+                <ul>
+                    {result.length > 0 ? (
+                        <ul>
+                            {result.map((result) => (
+                                <li key={result.id}>{result.username || result.topic}</li>
+                            ))}
+                        </ul>
+                    ) : (
+                        <div>No results found.</div>
+                    )}
+                </ul>
+            )}
+            <Link
+                className="btn btn-block btn-squared btn-light text-dark"
+                to={`/profiles/${profile._id}`}
+            >
+                View
+            </Link>
         </div>
     )
 };
 
-export default SearchBar;
-
+export default Searchbar;
 

@@ -17,7 +17,6 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import { Route } from 'react-router-dom';
 
 function ProtectedRoute({ element: Element, role }) {
   const userRole = localStorage.getItem('role');
@@ -70,14 +69,14 @@ function App() {
               />
               
               <ProtectedRoute 
-               path="/me" 
+               path="/teachers/:teacherId" 
                element={<Teacher />}
                role="teacher"
               />
               
               
               <ProtectedRoute 
-                path="/me" 
+                path="/students/:studentId" 
                 element={<Student />}
                 role="student"
                 />
