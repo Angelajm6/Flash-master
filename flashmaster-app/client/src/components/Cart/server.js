@@ -48,7 +48,7 @@ if (process.env.NODE_ENV !== 'production') {
           currency: 'usd'
         }).then(function() {
           console.log('Donation Successful!')
-          res.json({ message: 'Successfully Donated to A Teacher!' })
+          res.json({ message: 'Successfully Donated To A Teacher!' })
         }).catch(function() {
           console.log('Charge Fail')
           res.status(500).end()
