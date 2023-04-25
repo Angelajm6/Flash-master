@@ -72,13 +72,4 @@ export const QUERY_SINGLE_FLASHDECK = gql`
   }
 `;
 
-// export const QUERY_POST = gql`
-//   query getPost($id: Int!) {
-//     post(id: $id) {
-//       id
-//       authorId
-//       title
-//       votes
-//     }
-//   }
-// `;
+
