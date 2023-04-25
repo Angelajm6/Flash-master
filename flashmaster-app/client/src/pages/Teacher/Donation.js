@@ -17,7 +17,7 @@ function Teacher(props) {
   // HandleDonationSubmit function is called When the user submits the form
   const handleDonationSubmit = (event) => {
     event.preventDefault();
-    // Replace this with your actual donation logic
+    
     alert(`Thank you for donating $${donationAmount} to ${props.name}!`);
   }
 
