@@ -20,5 +20,5 @@ const Footer = () => {
     </footer>
   );
 };
-
+//here is my footer 
 export default Footer;
