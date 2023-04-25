@@ -8,7 +8,7 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
+import { Navigate } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Teacher from './pages/Teacher/Teacher';

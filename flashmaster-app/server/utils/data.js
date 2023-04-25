@@ -31,10 +31,17 @@ const ROLE = {
       { id: 210, name: "Charlie Brown", role: ROLE.BASIC }
     ],
 
-    // Flash decks 
+    // Flash Decks 
     projects: [
-      { id: 1, name: "", userId: 1 },
-      { id: 2, name: "", userId: 2 },
-      { id: 3, name: "", userId: 3 }
-    ]
+      { id: 101, name: "American Revolution", "Titanic", "Civil War", "The Boxer Rebellion", "WW1", userId: 101 },
+      { id: 102, name: "The Great Gatsby", "The Grapes of Wrath", "To Kill a Mockingbird", "Catcher in the Rye", "Little Women", userId: 102 },
+      { id: 103, name: "Algebra 1", "Calculus 1", "Geometry", "Algebra 2", " AP Calculus", userId: 103 },
+      { id: 104, name: "Physics 1", "Biology", "Chemistry", "AP Chem", "AP Biology", userId: 104 },
+      { id: 105, name: "MLA Citation", "Grammar", "Sentence Structure", "Composition", "Research", userId: 105 },
+      { id: 106, name: "Supply & Demand", "Trickle Down Economics", "The Great Depression", "Inflation", "Economic Laws", userId: 106 },
+      { id: 107, name: "French Grammar", "Conjugations", "French Verbs", "French Adjectives", "Conversation", userId: 107 },
+      { id: 108, name: "Constitutional Convention", "The Bill of Rights", "Separation of Powers", "Legislative Branch", "Judicial Branch", userId: 108 },
+      { id: 108, name: "Civil Rights", "Jim Crow", "Segregation", "Civil War", "Pearl Harbor", userId: 109 },
+      { id: 109, name: "Nutrition", "Disease", "Viruses", "Bacteria", "SexEd", userId: 110 },
+    ],
   }
