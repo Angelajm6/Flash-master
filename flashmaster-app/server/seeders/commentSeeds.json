@@ -1,0 +1,44 @@
+[
+    {
+    "flashdeck_id": 1,  
+    "id": 1,
+    "commentText": "This deck was awesome.  Really great Algebra facts!!",
+    "commentAuthor": "Helga Pataki",
+    "createdAt": "created_at"
+    },
+    {
+    "flashdeck_id": 18,  
+    "id": 2,
+    "commentText": "This deck was OK.  I wish it had more historical dates to study instead of vocab.",
+    "commentAuthor": "Harry Pottery",
+    "createdAt": "created_at"
+    },
+    {
+    "flashdeck_id": 27,  
+    "id": 3,
+    "commentText": "I loved this deck!  Ms. Wang can really make science cool.  Her deck made learning these biology terms easy.",
+    "commentAuthor": "D.W. Read",
+    "createdAt": "created_at"
+    },
+    {
+    "flashdeck_id": 13,  
+    "id": 4,
+    "commentText": "Ugh, trickle down economics is sooooo boring.",
+    "commentAuthor": "Louise Belcher",
+    "createdAt": "created_at"
+    },
+    {
+    "flashdeck_id": 35,  
+    "id": 5,
+    "commentText": "Diseases are gross. I guess this deck was good.",
+    "commentAuthor": "Angelica Pickles",
+    "createdAt": "created_at"
+    },
+    {
+    "flashdeck_id": 40,  
+    "id": 6,
+    "commentText": "Ok, who knew there was so much to learn about The Grapes of Wrath.",
+    "commentAuthor": "Charlie Brown",
+    "createdAt": "created_at"
+        }
+]

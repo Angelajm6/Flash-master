@@ -113,3 +113,12 @@ export const REMOVE_FLASHDECK = gql`
     }
   }
 `;
+
+export const LOGIN_USER = gql`
+mutation loginUser($email: String!, $password: String!) {
+  loginUser(email: $email, password: $password) {
+    email
+    password
+  }
+}
+`;
