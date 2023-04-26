@@ -8,10 +8,11 @@ const typeDefs = gql`
     email: String
     password: String
     role: String
-    flashDecks: [Flash]!
+    Flash: [Flash]!
   }
 
   type Comment {
+    Flash_id: ID
     _id: ID
     commentText: String
     commentAuthor: String
