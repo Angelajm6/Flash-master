@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Auth from '../../utils/auth';
 
-import SearchBar from '../SearchComponent';
+import SearchBar from '../searchComponent';
 
 const Header = () => {
     const logout = (event) => {
