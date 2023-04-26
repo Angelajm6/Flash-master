@@ -7,18 +7,19 @@ const typeDefs = gql`
     _id: ID
     email: String
     password: String
-    admin: String
-    flashDecks: [String]!
+    role: String
+    Flash: [Flash]!
   }
 
   type Comment {
+    Flash_id: ID
     _id: ID
     commentText: String
     commentAuthor: String
     createdAt: String
   }
 
-  type Flashdeck {
+  type Flash {
     _id: ID
     topic: String
     author: String
@@ -32,7 +33,6 @@ const typeDefs = gql`
   }
 
 
-  Work in Progress>>
 
   type Query {
     users: [User]
@@ -43,12 +43,10 @@ const typeDefs = gql`
 
   type Mutation {
     addUser(name: String!, email: String!, password: String!): Auth
+    updateUser(name: String, subject: String, _id: ID, email: String, password: String, role: String, Flash: [String]!): User
     login(email: String!, password: String!): Auth
-    addComment(
-      commentId: ID!  
-      commentText: String!
-      commentAuthor: String!)
-    addFlashDeck(flashName: String!, flashAuthor: String!, createdAt: String)  
+    addComment(commentId: ID!, commentText: String!, commentAuthor: String!): Comment
+    addFlashDeck(flashName: String!, flashAuthor: String!, createdAt: String): Flash  
   }
 `;
 
