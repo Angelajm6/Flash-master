@@ -36,7 +36,6 @@ const resolvers = {
       flash: async (parent, { _id }) => {
         return await Flash.findById(_id).populate('topic');
       },
-      
       comments: async (parent, { flash, user_id }) => {
         const params = {};
   
@@ -78,8 +77,7 @@ const resolvers = {
             price: price.id,
             quantity: 1
           });
-        
-  
+ 
         const session = await stripe.checkout.sessions.create({
           payment_method_types: ['card'],
           donation,
