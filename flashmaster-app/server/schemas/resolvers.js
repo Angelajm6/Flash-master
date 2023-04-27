@@ -1,20 +1,42 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
-const { User } = require('../models/user');
+const { User, Flash, Comment } = require('../models');
 
 const resolvers = {
     Query: {
       users: async () => {
-        return await Users.find();
+        return await User.find();
       },
       user: async (parent, context) => {
         if (context.user) {
          return await User.find();
         }
-  
-        throw new AuthenticationError('Not logged in');
+      user: async (parent, { name }) => {
+        return User.findOne({ name });
       },
+      user: async (parent, { name }) => {
+        return User.findOne({ name });
+      },
+
+      // --Flagged for possible deletion: Throws error message.--
+
+      // user: async (parent, context) => {
+      //   if (context.user) {
+      //    return await User.find();
+      //   }
+  
+      //   throw new AuthenticationError('Not logged in');
+      // },
+
+
+      
+      // me: async (parent, args, context) => {
+      //   if (context.user) {
+      //     return User.findOne({ _id: context.user._id }).populate('flash');
+      //   }
+      //   throw new AuthenticationError('You need to be logged in!');
+      // },
 
     },
     Mutation: {
