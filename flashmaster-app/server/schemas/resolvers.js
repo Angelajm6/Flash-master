@@ -10,7 +10,7 @@ const resolvers = {
       },
       user: async (parent, context) => {
         if (context.user) {
-         return await user.find();
+         return await User.find();
         }
   
         throw new AuthenticationError('Not logged in');
