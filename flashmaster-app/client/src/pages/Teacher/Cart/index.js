@@ -1,4 +1,4 @@
-3.41 KiB
+// 3.41 KiB
 import React, { useEffect } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { useLazyQuery } from '@apollo/client';
