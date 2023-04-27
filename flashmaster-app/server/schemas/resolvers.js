@@ -5,6 +5,16 @@ const { User } = require('../models/user');
 
 const resolvers = {
     Query: {
+      users: async () => {
+        return await Users.find();
+      },
+      user: async (parent, context) => {
+        if (context.user) {
+         return await user.find();
+        }
+  
+        throw new AuthenticationError('Not logged in');
+      },
 
     },
     Mutation: {
