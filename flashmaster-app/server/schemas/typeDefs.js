@@ -40,7 +40,7 @@ const typeDefs = gql`
     flash(userId: ID): Flash
     comments(name: String): [Comment]
     comment(commentId: ID!): Comment
-    donation(userId: ID): Donation
+    donation(userId: ID, teacher: String!, amount: INT): Donation
   }
 
   type Mutation {
