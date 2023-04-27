@@ -1,5 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+function CommentForm() {
+    return (
+        <div>
+            <h1>Comment Form</h1>
+        </div>
+    )
+};
+
+export default CommentForm;

@@ -8,10 +8,10 @@
 // import CommentForm from '../../components/CommentForm/CommentForm';
 // import Login from '../Login';
 
-
 // // Temporary name, intended to pull all flashDecks created by the user
 // import { QUERY_FLASHDECKS_BY_USER } from '../../utils/queries'; 
 // import { QUERY_USER } from '../../utils/queries';
+
 
 
 // // If user is admin, props passed from home page to Teacher Portal page.
@@ -37,12 +37,13 @@
 //         <CommentForm>
 //             <CommentList></CommentList>
 //         </CommentForm>
-// test test
+
 
             
 //     </>
     
     
+
 //     );
 
     

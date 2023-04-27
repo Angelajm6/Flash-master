@@ -1,20 +1,23 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
+const { User, Flash, Comment } = require('../models');
 
 const resolvers = {
     Query: {
       users: async () => {
         return await Users.find();
       },
-      user: async (parent, context) => {
-        if (context.user) {
-         return await user.find();
-        }
-  
-        throw new AuthenticationError('Not logged in');
+      user: async (parent, { name }) => {
+        return User.findOne({ name });
       },
-      flashcard: async (parent, { topic, id }) => {
+      me: async (parent, args, context) => {
+        if (context.user) {
+          return User.findOne({ _id: context.user._id }).populate('flash');
+        }
+        throw new AuthenticationError('You need to be logged in!');
+      },
+      flashcards: async (parent, { topic, id }) => {
         const params = {};
   
         if (topic) {
@@ -32,11 +35,42 @@ const resolvers = {
       flash: async (parent, { _id }) => {
         return await Flash.findById(_id).populate('topic');
       },
+      
+      comments: async (parent, { flash, user_id }) => {
+        const params = {};
+  
+        if (flash) {
+          params.flash = flash;
+        }
+  
+        if (user_id) {
+          params.user_id = {
+            $regex: user_id
+          };
+        }
+  
+        return await comments.find(params).populate('flash');
+      },
+      comment: async (parent, { _id }) => {
+        return await Comment.findById(_id).populate('topic');
+      },
+      donation: async (parent, { _id }, context) => {
+        if (context.user) {
+          const user = await User.findById(context.user._id).populate({
+            path: 'orders.products',
+            populate: 'category'
+          });
+  
+          return user.orders.id(_id);
+        }
+  
+        throw new AuthenticationError('Not logged in');
+      },
 
     },
     Mutation: {
-        addUser: async (parent, args) => {
-            const user = await User.create(args);
+        addUser: async (parent, {name, email, password}) => {
+            const user = await User.create(name, email, password);
             const token = signToken(user);
 
             return { token, user };

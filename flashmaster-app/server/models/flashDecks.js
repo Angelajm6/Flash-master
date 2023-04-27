@@ -17,11 +17,12 @@ const flashSchema = new Schema({
         default: Date.now,
         get: (timestamp) => dateFormat(timestamp),
     },
-    flashCard: [{}],
-    toJSON: {
-        virtuals: true,
-    },
-    id: false,
+    // flashCard: [{}],
+    
+    //     toJSON: {
+    //     virtuals: true,
+    // },
+    // id: false,
 });
 
 flashSchema.virtual('cardCount').get(function () {

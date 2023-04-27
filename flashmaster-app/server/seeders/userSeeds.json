@@ -6,7 +6,7 @@
         "role": "admin",
         "email": "aharrison@eaststate.edu",
         "password": "Harrison101",
-        "flashDecks": ["American Revolution", "Titanic", "Civil War", "The Boxer Rebellion", "WW1"]
+        "Flash": ["American Revolution", "Titanic", "Civil War", "The Boxer Rebellion", "WW1"]
     },
     {
         "name": "Abigail Carter",
@@ -15,7 +15,7 @@
         "role": "admin",
         "email": "acarter@eaststate.edu",
         "password": "Carter102",
-        "flashDecks": ["The Great Gatsby", "The Grapes of Wrath", "To Kill a Mockingbird", "Catcher in the Rye", "Little Women"]
+        "Flash": ["The Great Gatsby", "The Grapes of Wrath", "To Kill a Mockingbird", "Catcher in the Rye", "Little Women"]
     },
     {
         "name": "Allen Barber",
@@ -24,7 +24,7 @@
         "role": "admin",
         "email": "abarber@eaststate.edu",
         "password": "Barber103",
-        "flashDecks": ["Algebra 1", "Calculus 1", "Geometry", "Algebra 2", " AP Calculus"]
+        "Flash": ["Algebra 1", "Calculus 1", "Geometry", "Algebra 2", " AP Calculus"]
     },
     {
         "name": "Brenda Wang",
@@ -33,7 +33,7 @@
         "role": "admin",
         "email": "bwang@eaststate.edu",
         "password": "Wang103",
-        "flashDecks": ["Physics 1", "Biology", "Chemistry", "AP Chem", "AP Biology"]
+        "Flash": ["Physics 1", "Biology", "Chemistry", "AP Chem", "AP Biology"]
     },
     {
         "name": "Betty Hansen",
@@ -42,7 +42,7 @@
         "role": "admin",
         "email": "bhansen@eaststate.edu",
         "password": "Hansen105",
-        "flashDecks": ["MLA Citation", "Grammar", "Sentence Structure", "Composition", "Research"]
+        "Flash": ["MLA Citation", "Grammar", "Sentence Structure", "Composition", "Research"]
     },
     {
         "name": "Cathy Johnson",
@@ -51,7 +51,7 @@
         "role": "admin",
         "email": "cjohnson@eaststate.edu",
         "password": "Johnson106",
-        "flashDecks": ["Supply & Demand", "Trickle Down Economics", "The Great Depression", "Inflation", "Economic Laws"]
+        "Flash": ["Supply & Demand", "Trickle Down Economics", "The Great Depression", "Inflation", "Economic Laws"]
     },
     {
         "name": "Cindy Rogers",
@@ -60,7 +60,7 @@
         "role": "admin",
         "email": "crogers@eaststate.edu",
         "password": "Rogers107",
-        "flashDecks": ["French Grammar", "Conjugations", "French Verbs", "French Adjectives", "Conversation"]
+        "Flash": ["French Grammar", "Conjugations", "French Verbs", "French Adjectives", "Conversation"]
     },
     {
         "name": "Jack Webster",
@@ -69,7 +69,7 @@
         "role": "admin",
         "email": "jwebster@eaststate.edu",
         "password": "Webster108",
-        "flashDecks": ["Constitutional Convention", "The Bill of Rights", "Separation of Powers", "Legislative Branch", "Judicial Branch"]
+        "Flash": ["Constitutional Convention", "The Bill of Rights", "Separation of Powers", "Legislative Branch", "Judicial Branch"]
     },
     {
         "name": "Rob Williams",
@@ -78,7 +78,7 @@
         "role": "admin",
         "email": "rwilliams@eaststate.edu",
         "password": "Williams109",
-        "flashDecks": ["Civil Rights", "Jim Crow", "Segregation", "Civil War", "Pearl Harbor"]
+        "Flash": ["Civil Rights", "Jim Crow", "Segregation", "Civil War", "Pearl Harbor"]
     },
     {
         "name": "Jenny Swift",
@@ -87,76 +87,96 @@
         "role": "admin",
         "email": "jswift@eaststate.edu",
         "password": "Swift110",
-        "flashDecks": ["Nutrition", "Disease", "Viruses", "Bacteria", "SexEd"]
+        "Flash": ["Nutrition", "Disease", "Viruses", "Bacteria", "SexEd"]
     },
     {
         "name": "Tommy Pickles",
+        "subject": "Student",
         "id": 201,
         "role": "basic",
         "email": "tpickles@eaststate.edu",
-        "password": "Tpickles201"
+        "password": "Tpickles201",
+        "Flash": []
     },
     {
         "name": "Dexter McPherson",
+        "subject": "Student",
         "id": 202,
         "role": "basic",
         "email": "dmcpherson@eaststate.edu",
-        "password": "Mcpherson202"
+        "password": "Mcpherson202",
+        "Flash": []
     },
     {
         "name": "Jimmy Neutron",
+        "subject": "Student",
         "id": 203,
         "role": "basic",
         "email": "jneutron@eaststate.edu",
-        "password": "Neutron203"
+        "password": "Neutron203",
+        "Flash": []
     },
     {
         "name": "Helga Pataki",
+        "subject": "Student",
         "id": 204,
         "role": "basic",
         "email": "hpataki@eaststate.edu",
-        "password": "Pataki204"
+        "password": "Pataki204",
+        "Flash": []
     },
     {
         "name": "Harry Potter",
+        "subject":"Student",
         "id": 205,
         "role": "basic",
         "email": "hpotter@eaststate.edu",
-        "password": "Potter205"
+        "password": "Potter205",
+        "Flash": []
     },
     {
         "name": "D.W. Read",
+        "subject": "Student",
         "id": 206,
         "role": "basic",
         "email": "dwread@eaststate.edu",
-        "password": "Read206"
+        "password": "Read206",
+        "Flash": []
     },
     {
         "name": "Louise Belcher",
+        "subject":"Student",
         "id": 207,
         "role": "basic",
         "email": "lbelcher@eaststate.edu",
-        "password": "Belcher207"
+        "password": "Belcher207",
+        "Flash":[]
     },
     {
         "name": "Angelica Pickles",
+        "subject": "Student",
         "id": 208,
         "role": "basic",
         "email": "apickles@eaststate.edu",
-        "password": "Apickles208"
+        "password": "Apickles208",
+        "Flash":[]
     },
     {
         "name": "Johnny Bravo",
+        "subject": "Student",
         "id": 209,
         "role": "basic",
         "email": "jbravo@eaststate.edu",
-        "password": "Bravo209"
+        "password": "Bravo209",
+        "Flash": []
     },
     {
         "name": "Charlie Brown",
+        "subject": "Student",
         "id": 210,
         "role": "basic",
         "email": "cbrown@eaststate.edu",
-        "password": "Brown210"
+        "password": "Brown210",
+        "Flash": []
     }
     ]
