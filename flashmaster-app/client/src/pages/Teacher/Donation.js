@@ -8,18 +8,6 @@ import Auth from '../../utils/auth';
 function Teacher(props) {
   const [donationAmount, setDonationAmount] = useState(0);
 
-<<<<<<< HEAD
-const Donate = () => {
-    return (
-        <div name='Donate' className='w-full h-screen'>
-            <h1>Donation</h1>
-            
-        </div>
-    )
-};
-
-export default Donate;
-=======
 // HandleDonationChange function updates the donationAmount state when the user enters a donation amount
   const handleDonationChange = (event) => {
     setDonationAmount(event.target.value);
@@ -49,4 +37,3 @@ export default Donate;
 }
 
 export default Teacher;
->>>>>>> main
