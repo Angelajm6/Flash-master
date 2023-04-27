@@ -14,6 +14,24 @@ const resolvers = {
   
         throw new AuthenticationError('Not logged in');
       },
+      flashcard: async (parent, { topic, id }) => {
+        const params = {};
+  
+        if (topic) {
+          params.topic = topic;
+        }
+  
+        if (id) {
+          params.id = {
+            $regex: id
+          };
+        }
+  
+        return await Flashcards.find(params).populate('topic');
+      },
+      flash: async (parent, { _id }) => {
+        return await Flash.findById(_id).populate('topic');
+      },
 
     },
     Mutation: {
@@ -29,6 +47,23 @@ const resolvers = {
             }
       
             throw new AuthenticationError('Not logged in');
+          },
+          login: async (parent, { email, password }) => {
+            const user = await User.findOne({ email });
+      
+            if (!user) {
+              throw new AuthenticationError('Incorrect credentials');
+            }
+      
+            const correctPw = await user.isCorrectPassword(password);
+      
+            if (!correctPw) {
+              throw new AuthenticationError('Incorrect credentials');
+            }
+      
+            const token = signToken(user);
+      
+            return { token, user };
           },
           
         }
