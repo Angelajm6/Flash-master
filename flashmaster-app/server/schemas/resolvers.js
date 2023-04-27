@@ -7,7 +7,7 @@ const { Donation } = require('')
 const resolvers = {
     Query: {
       users: async () => {
-        return await Users.find();
+        return await User.find();
       },
       user: async (parent, { name }) => {
         return User.findOne({ name });
@@ -60,8 +60,6 @@ const resolvers = {
   
           return user.donation.id(_id);
         }
-  
-        throw new AuthenticationError('Not logged in');
       },
       checkout: async (parent, args, context) => {
         const url = new URL(context.headers.referer).origin;
@@ -135,7 +133,7 @@ const resolvers = {
           },
           
         }
-};
+}
 
 
 

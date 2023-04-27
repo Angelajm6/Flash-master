@@ -8,7 +8,7 @@ const typeDefs = gql`
     email: String
     password: String
     role: String
-    Flash: [Flash]!
+    flashcards: [Flash]!
   }
 
   type Comment {
@@ -32,13 +32,12 @@ const typeDefs = gql`
     user: User
   }
 
-
-
   type Query {
     users: [User]
     user(name: String!): User
     comments(name: String): [Comment]
     comment(commentId: ID!): Comment
+
   }
 
   type Mutation {
@@ -46,7 +45,7 @@ const typeDefs = gql`
     updateUser(name: String, subject: String, _id: ID, email: String, password: String, role: String, Flash: [String]!): User
     login(email: String!, password: String!): Auth
     addComment(commentId: ID!, commentText: String!, commentAuthor: String!): Comment
-    addFlashDeck(flashName: String!, flashAuthor: String!, createdAt: String): Flash  
+    addFlashcard(flashName: String!, flashAuthor: String!, createdAt: String): Flash  
   }
 `;
 
