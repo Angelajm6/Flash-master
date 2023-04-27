@@ -109,11 +109,11 @@ const resolvers = {
           addDonation: async (parent, { products }, context) => {
             console.log(context);
             if (context.user) {
-              const order = new Order({ products });
+              const donation = new Donation({ products });
       
-              await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
+              await User.findByIdAndUpdate(context.user._id, { $push: { donations: donation } });
       
-              return order;
+              return donation;
             }
       
             throw new AuthenticationError('Not logged in');
