@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const { ROLE, users } = require('./data')
-const { authUser, authRole } = require('./basicAuth')
+const { authUser } = require('./basicAuth')
 const projectRouter = require('./routes/projects')
 
 app.use(express.json())
@@ -11,6 +11,16 @@ app.use('/projects', projectRouter)
 app.get('/', (req, res) => {
   res.send('Home')
 })
+
+function authRole(role) {
+  return (req, res, next) => {
+    if (req.user && req.user.role === role || req.user.role === 'teacher') {
+      next()
+    } else {
+      res.status(401).send('Not authorized')
+    }
+  }
+}
 
 app.get('/portal', authUser, (req, res) => {
   res.send('Student Portal')
