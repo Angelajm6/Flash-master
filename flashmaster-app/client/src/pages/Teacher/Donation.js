@@ -4,7 +4,7 @@ import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../../utils/mutations';
 import Auth from '../../utils/auth';
 import Stripe from 'stripe';
-const stripe = Stripe('pk_test_51N1eLfJPgoVjPZw2aIeOMdDZRtMsD4yfMSIJy7KJneZp7YyDC6meuYVvMMhXQelvinIrn0aIqbe9fdQP7WyJxqpZ00e1dM6Szc');
+const stripe = new Stripe(process.env.STRIPE_PUBLISHABLE_KEY); 
 
 //React hooks to manage state.
 function Teacher(props) {
