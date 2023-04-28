@@ -17,7 +17,7 @@ function authRole(role) {
     if (req.user && req.user.role === role || req.user.role === 'teacher') {
       next()
     } else {
-      res.status(401).send('Not authorized')
+      res.status(401).send('Not Authorized')
     }
   }
 }
