@@ -8,9 +8,11 @@ import { Link } from 'react-router-dom';
 const Searchbar = () => {
     const [search, setSearch] = useState('');
     const [result, setResult] = useState([]);
-    const { loading, data } = useQuery(QUERY_SINGLE_USER, QUERY_FLASHDECK);
-    const users = data?.users || [];
-    const flashdecks = data?.flashdecks || [];
+    const { loading: userLoading, data: userData } = useQuery(QUERY_SINGLE_USER);
+    const { loading: flashdeckLoading, data: flashdeckData } = useQuery(QUERY_FLASHDECK);
+    const users = userData?.users || [];
+    const flashdecks = flashdeckData?.flashdecks || [];
+
 
     const handleSearch = (e) => {
         e.preventDefault();
@@ -43,20 +45,21 @@ const Searchbar = () => {
                     {result.length > 0 ? (
                         <ul>
                             {result.map((result) => (
-                                <li key={result.id}>{result.username || result.topic}</li>
+                                <li key={result.id}>
+                                    <Link to={`/users/${result._id}`}>
+                                        {result.username || result.topic}
+                                    </Link> 
+                                    </li>
                             ))}
                         </ul>
-                    ) : (
+                    ) : search && (
                         <div>No results found.</div>
                     )}
                 </ul>
             )}
-            <Link
-                className="btn btn-block btn-squared btn-light text-dark"
-                to={`/profiles/${profile._id}`}
-            >
-                View
-            </Link>
+            {!search && (
+                <div>Please Enter A Topic</div>
+            )}
         </div>
     )
 };
