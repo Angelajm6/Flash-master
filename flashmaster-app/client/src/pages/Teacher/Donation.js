@@ -7,7 +7,6 @@ import Stripe from 'stripe';
 
 const stripe = Stripe('pk_test_51N1eLfJPgoVjPZw2aIeOMdDZRtMsD4yfMSIJy7KJneZp7YyDC6meuYVvMMhXQelvinIrn0aIqbe9fdQP7WyJxqpZ00e1dM6Szc');
 
-
 function Teacher(props) {
   const [donationAmount, setDonationAmount] = useState(0);
 
@@ -18,7 +17,7 @@ function Teacher(props) {
   const handleDonationSubmit = async (event) => {
     event.preventDefault();
 
-    // This calls the server-side endpoint to create a checkout session
+    // This calls the server-side endpoint to create a Stripe Checkout session
     const response = await fetch('/create-checkout-session', {
       method: 'POST',
       headers: {
@@ -31,7 +30,7 @@ function Teacher(props) {
 
     const session = await response.json();
 
-    // Redirects the user to the checkout page
+    // Redirects the user to the Stripe Checkout page
     const result = await stripe.redirectToCheckout({
       sessionId: session.id
     });
