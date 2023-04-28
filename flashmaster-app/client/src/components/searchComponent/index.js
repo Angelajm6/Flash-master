@@ -8,10 +8,9 @@ import { Link } from 'react-router-dom';
 const Searchbar = () => {
     const [search, setSearch] = useState('');
     const [result, setResult] = useState([]);
-    const { loading: userLoading, data: userData } = useQuery(QUERY_SINGLE_USER);
-    const { loading: flashdeckLoading, data: flashdeckData } = useQuery(QUERY_FLASHDECK);
-    const users = userData?.users || [];
-    const flashdecks = flashdeckData?.flashdecks || [];
+    const { loading, data } = useQuery(QUERY_SINGLE_USER, QUERY_FLASHDECK);
+    const users = data?.users || [];
+    const flashdecks = data?.flashdecks || [];
 
 
     const handleSearch = (e) => {
