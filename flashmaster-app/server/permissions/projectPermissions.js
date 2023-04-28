@@ -4,9 +4,11 @@ function canViewProject(user, project) {
   return (
     user.role === ROLE.ADMIN ||
     project.userId === user.id ||
-    project.isPublic === true
+    project.isPublic === true ||
+    (user.role === ROLE.BASIC && project.isPublic === true)
   )
 }
+
 
 function scopedProjects(user, projects) {
   if (user.role === ROLE.ADMIN) return projects
