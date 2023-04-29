@@ -7,13 +7,13 @@ query allUsers {
     _id
     name
     subject
-    flashcards
+    Flash
   }
 }
 `;
-export const QUERY_FLASHCARD =  gql`
-query allUsers {
-  Flashcard {
+export const QUERY_FLASHCARDS =  gql`
+query allFlash {
+  Flash {
     _id
     topic
     author
@@ -29,7 +29,7 @@ query singleUser($userId: ID!)  {
   user(userId: $userId) {
     _id
     name
-    flashcards {
+    Flash {
       _id
       topic
       author
@@ -45,10 +45,66 @@ export const QUERY_ME = gql`
     me {
       _id
       name
-      role
-      flashcards
+      Flash
     }
   }
 `;
 
+export const QUERY_COMMENTS =  gql`
+query allComments {
+  Comments {
+    _id
+    Flash
+    author
+    createdAt
+    comments
+  }
+}
+`;
 
+export const QUERY_SINGLE_COMMENT =  gql`
+query singleComment {
+  Comment {
+    _id
+    Flash
+    author
+    createdAt
+    comments
+  }
+}
+`;
+
+export const QUERY_DONATIONS = gql`
+  query  allDonations{
+    Donations {
+      _id
+      teacher
+      amount
+    }
+  }
+`;
+
+export const QUERY_SINGLE_DONATION = gql`
+  query  singleDonation($name: String!){
+    Donation(name: $name) {
+      _id
+      teacher
+      amount
+    }
+  }
+`;
+
+export const QUERY_CHECKOUT = gql`
+  query  singleCheckout($name: String!, $email: String!){
+    Checkout(name: $name, email: $email) {
+      _id
+      name
+      email
+      Donation{
+        _id
+        teacher
+        amount
+      }
+    }
+  }
+`;
