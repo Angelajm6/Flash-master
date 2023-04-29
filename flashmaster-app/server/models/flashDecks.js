@@ -17,7 +17,10 @@ const flashSchema = new Schema({
         default: Date.now,
         get: (timestamp) => dateFormat(timestamp),
     },
-    // flashCard: [{}],
+    flashCard: [{
+        question: {type: String, required: true},
+        answer: {type: String, required: true}
+    }],
     
     //     toJSON: {
     //     virtuals: true,
@@ -25,9 +28,9 @@ const flashSchema = new Schema({
     // id: false,
 });
 
-flashSchema.virtual('cardCount').get(function () {
-    return this.flashCard.length;
-});
+// flashSchema.virtual('cardCount').get(function () {
+//     return this.flashCard.length;
+// });
 
 const Flash = model('flash', flashSchema);
 

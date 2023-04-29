@@ -29,14 +29,14 @@ const CommentList = ({ comments, isLoggedInUser = false }) => {
   };
 
   if (!comments.length) {
-    return <h3>No Skills Yet</h3>;
+    return <h3>No Comments Yet</h3>;
   }
 
   return (
     <div>
       <div className="flex-row justify-space-between my-4">
-        {skills &&
-          skills.map((comment) => (
+        {comments &&
+          comments.map((comment) => (
             <div key={comment} className="col-12 col-xl-6">
               <div className="card mb-3">
                 <h4 className="card-header bg-dark text-light p-2 m-0 display-flex align-center">

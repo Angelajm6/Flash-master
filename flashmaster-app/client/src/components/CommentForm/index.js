@@ -45,18 +45,18 @@ const CommentForm = ({ userId }) => {
 
           <div className="col-12 col-lg-3">
             <button className="btn btn-info btn-block py-3" type="submit">
-              Endorse Skill
+              Submit Comment
             </button>
           </div>
           {error && (
             <div className="col-12 my-3 bg-danger text-white p-3">
-              {error.comment}
+              {error.message}
             </div>
           )}
         </form>
       ) : (
         <p>
-          You need to be logged in to endorse skills. Please{' '}
+          You need to be logged in to add a comment. Please{' '}
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}

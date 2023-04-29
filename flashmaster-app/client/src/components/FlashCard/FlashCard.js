@@ -13,7 +13,7 @@ export default function FlashCard({ flashcard }) {
     function setMaxHeight() {
         const frontHeight = frontEl.current.getBoundingClientRect().height
         const backHeight = backEl.current.getBoundingClientRect().height
-        setHeight(Math.max(frontHeight, backHeight, 100))
+        setHeight(Math.max(frontHeight, backHeight, 300))
 
     }
     // Changes max height based on any changes to questions or answers on the flashcards
@@ -31,14 +31,8 @@ export default function FlashCard({ flashcard }) {
     >
         <div className="front" ref={frontEl}>
             {flashcard.question}
-            {/* <div className="flashcard-options">
-                {flashcard.options.map(option => {
-                    return <div className="flashcard-option">{option}</div>
-                })}
-            </div> */}
         </div>
         <div className="back" ref={backEl}>{flashcard.answer}</div>
-        {flip ? flashcard.answer : flashcard.question}
 
       
     </div>
