@@ -10,10 +10,6 @@ const stripe = Stripe('pk_test_51N1eLfJPgoVjPZw2aIeOMdDZRtMsD4yfMSIJy7KJneZp7YyD
 function Teacher(props) {
   const [donationAmount, setDonationAmount] = useState(0);
 
-<<<<<<< HEAD
-// HandleDonationChange function updates the donationAmount state when the user enters a donation amount
-=======
->>>>>>> main
   const handleDonationChange = (event) => {
     setDonationAmount(event.target.value);
   }
