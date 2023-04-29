@@ -39,7 +39,7 @@ const userSchema = new Schema({
             ref: 'comment',
         },
     ],
-    flashCards: [
+    flashDecks: [
         {
             type: Schema.Types.ObjectId,
             ref: 'flash',

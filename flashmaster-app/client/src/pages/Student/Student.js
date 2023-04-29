@@ -9,8 +9,8 @@
 // import Login from '../Login';
 
 
-// // Temporary name, intended to pull all flashCards created by the user
-// import { QUERY_FLASHCARDS_BY_USER } from '../../utils/queries'; 
+// // Temporary name, intended to pull all flashDecks created by the user
+// import { QUERY_FLASHDECKS_BY_USER } from '../../utils/queries'; 
 // import { QUERY_USER } from '../../utils/queries';
 
 
@@ -29,7 +29,7 @@
 //             <card className="Gallery"><Collections></Collections>
 //                 <ul className="list-group">
 //                 {props.results.map((result) => (
-//                     <li className="list-group-item" key={result.flashCards}></li>
+//                     <li className="list-group-item" key={result.flashDecks}></li>
 //                 ))}
 //                 </ul>
 //             </card>

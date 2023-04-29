@@ -2,13 +2,13 @@ import React from 'react';
 import { useState } from 'react';
 import { useQuery } from '@apollo/client';
 import { QUERY_SINGLE_USER } from '../../utils/queries';
-import { QUERY_FLASHCARDS } from '../../utils/queries';
+import { QUERY_FLASHCARD } from '../../utils/queries';
 import { Link } from 'react-router-dom';
 
 const Searchbar = () => {
     const [search, setSearch] = useState('');
     const [result, setResult] = useState([]);
-    const { loading, data } = useQuery(QUERY_SINGLE_USER, QUERY_FLASHCARDS);
+    const { loading, data } = useQuery(QUERY_SINGLE_USER, QUERY_FLASHCARD);
     const users = data?.users || [];
     const flashcards = data?.flashcards || [];
 
