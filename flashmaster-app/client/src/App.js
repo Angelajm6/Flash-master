@@ -22,12 +22,12 @@ import Signup from './pages/Signup'; //imports signup page
 import Login from './pages/Login'; //imports login
 import Header from './components/Header'; //imports header component
 import Footer from './components/Footer'; //imports footer component
-import Donation from '../src/pages/Teacher/Donation';
-import Gallery from '../src/pages/Teacher/Gallery';
-import cartIndex from '../src/pages/Teacher/Cart/index';
-import cartResolvers from '../src/pages/Teacher/Cart/resolvers';
-import cartServer from '../src/pages/Teacher/Cart/server';
-import Collections from '../src/pages/Student/Collections';
+// import Donation from '../src/pages/Teacher/Donation';
+// import Gallery from '../src/pages/Teacher/Gallery';
+// import cartIndex from '../src/pages/Teacher/Cart/index';
+// import cartResolvers from '../src/pages/Teacher/Cart/resolvers';
+// import cartServer from '../src/pages/Teacher/Cart/server';
+// import Collections from '../src/pages/Student/Collections';
 
 //this is a function for the routes being protected for different roles
 function ProtectedRoute({ element: Element, role }) {

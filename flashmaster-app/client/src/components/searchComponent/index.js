@@ -52,8 +52,8 @@ const Searchbar = () => {
                 </ul>
             )}
             <Link
-                className="btn btn-block btn-squared btn-light text-dark"
-                to={`/profiles/${profile._id}`}
+                // className="btn btn-block btn-squared btn-light text-dark"
+                // to={`/profiles/${profile._id}`}
             >
                 View
             </Link>
