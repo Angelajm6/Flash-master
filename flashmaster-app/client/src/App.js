@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import {
   ApolloClient,
@@ -8,7 +8,6 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Navigate } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Teacher from './pages/Teacher/Teacher';
@@ -17,16 +16,6 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Header from './components/Header';
 import Footer from './components/Footer';
-
-function ProtectedRoute({ element: Element, role }) {
-  const userRole = localStorage.getItem('role');
-  if (userRole !== role) {
-    return <Route to="/" />;
-  }
-  const Component = role === 'teacher' ? Teacher : Student;
-  return <Route element={<Component />} />;
-}
-
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -48,6 +37,13 @@ const client = new ApolloClient({
 });
 
 function App() {
+  const [userRole, setUserRole] = useState(null);
+
+  useEffect(() => {
+    const role = localStorage.getItem('role');
+    setUserRole(role);
+  }, []);
+
   return (
     <ApolloProvider client={client}>
       <Route>
@@ -55,39 +51,31 @@ function App() {
           <Header />
           <div className="container">
             <Route>
-              <Route 
-                path="/" 
+              <Route
+                path="/"
                 element={<Home />}
               />
-              <Route 
-                path="/login" 
+              <Route
+                path="/login"
                 element={<Login />}
               />
-              <Route 
-                path="/signup" 
+              <Route
+                path="/signup"
                 element={<Signup />}
               />
-              
-              <ProtectedRoute 
-               path="/teachers/:teacherId" 
-               element={<Teacher />}
-               role="teacher"
-              />
-              
-              
-              <ProtectedRoute 
-                path="/students/:studentId" 
-                element={<Student />}
-                role="student"
-                />
-              
-              <Route 
+              <Route
                 path="/teachers/:teacherId"
                 element={<Teacher />}
               />
               <Route
-              path="/students/:studentId"
-              element={<Student />}
+                path="/students/:studentId"
+                element={<Student />}
+              />
+              <Route
+                path="/me"
+                element={
+                  userRole === 'admin' ? <Teacher /> : <Student />
+                }
               />
             </Route>
           </div>

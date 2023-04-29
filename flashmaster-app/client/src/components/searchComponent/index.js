@@ -1,37 +1,29 @@
-import React from 'react';
-import { useState } from 'react';
-import { useQuery } from '@apollo/client';
+import React, { useState } from 'react';
+import { useLazyQuery } from '@apollo/client';
 import { QUERY_SINGLE_USER } from '../../utils/queries';
-import { QUERY_FLASHDECK } from '../../utils/queries';
 import { Link } from 'react-router-dom';
 
 const Searchbar = () => {
     const [search, setSearch] = useState('');
-    const [result, setResult] = useState([]);
-    const { loading, data } = useQuery(QUERY_SINGLE_USER, QUERY_FLASHDECK);
-    const users = data?.users || [];
-    const flashdecks = data?.flashdecks || [];
-
+    const [searchedResults, setSearchedResults] = useState([]);
+    const [searchSingleUser, { loading, data }] = useLazyQuery(QUERY_SINGLE_USER);
 
     const handleSearch = (e) => {
         e.preventDefault();
-        const searchedUsers = users.filter((user) => {
-            return user.name.toLowerCase().includes(search.toLowerCase())
+        searchSingleUser({
+            variables: { search },
+            onCompleted: (data) => {
+                setSearchedResults(data.users);
+            }
         });
-        const searchedFlashdecks = flashdecks.filter((flashdeck) => {
-            return flashdeck.topic.toLowerCase().includes(search.toLowerCase())
-        });
-        const searchedResults = [...searchedUsers, ...searchedFlashdecks];
-        setResult(searchedResults);
     };
-
 
     return (
         <div>
             <form onSubmit={handleSearch}>
                 <input
                     type="text"
-                    placeholder="Search For A Topic"
+                    placeholder="Search For A User"
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                 />
@@ -41,14 +33,14 @@ const Searchbar = () => {
                 <div>Loading...</div>
             ) : (
                 <ul>
-                    {result.length > 0 ? (
+                    {searchedResults.length > 0 ? (
                         <ul>
-                            {result.map((result) => (
-                                <li key={result.id}>
+                            {searchedResults.map((result) => (
+                                <li key={result._id}>
                                     <Link to={`/users/${result._id}`}>
-                                        {result.username || result.topic}
+                                        {result.username}
                                     </Link> 
-                                    </li>
+                                </li>
                             ))}
                         </ul>
                     ) : search && (
@@ -57,11 +49,10 @@ const Searchbar = () => {
                 </ul>
             )}
             {!search && (
-                <div>Please Enter A Topic</div>
+                <div>Please Enter A User Name</div>
             )}
         </div>
-    )
+    );
 };
 
 export default Searchbar;
-

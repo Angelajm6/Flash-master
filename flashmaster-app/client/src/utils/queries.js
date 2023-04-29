@@ -45,6 +45,7 @@ export const QUERY_ME = gql`
     me {
       _id
       name
+      role
       flashDecks
     }
   }
