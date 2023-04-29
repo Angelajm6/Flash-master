@@ -1,5 +1,3 @@
-const { gql } = require('apollo-server-express');
-
 const typeDefs = gql`
   type User {
     name: String
@@ -64,5 +62,6 @@ type Checkout {
     addDonation(userId: ID, teacher: String!, amount: Int): Donation 
   }
 `;
+
 
 module.exports = typeDefs;

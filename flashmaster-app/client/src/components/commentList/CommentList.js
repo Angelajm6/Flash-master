@@ -18,7 +18,7 @@ const CommentList = ({ comments, isLoggedInUser = false }) => {
     },
   });
 
-  const handleRemoveComment = async (skill) => {
+  const handleRemoveComment = async (comment) => {
     try {
       const { data } = await removeComment({
         variables: { comment },
