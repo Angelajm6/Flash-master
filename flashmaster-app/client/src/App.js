@@ -55,11 +55,11 @@ function App() {
 
   return (
     <ApolloProvider client={client}>
-      <Route>
+      <Router>
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
           <div className="container">
-            <Route>
+            <Routes>
               <Route
                 path="/"
                 element={<Home />}
@@ -86,11 +86,11 @@ function App() {
                   userRole === 'admin' ? <Teacher /> : <Student />
                 }
               />
-            </Route>
+            </Routes>
           </div>
           <Footer />
         </div>
-      </Route>
+      </Router>
     </ApolloProvider>
   );
 }

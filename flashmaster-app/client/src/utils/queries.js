@@ -7,13 +7,13 @@ query allUsers {
     _id
     name
     subject
-    flashDecks
+    flashcards
   }
 }
 `;
-export const QUERY_FLASHDECK =  gql`
+export const QUERY_FLASHCARD =  gql`
 query allUsers {
-  Flashdeck {
+  Flashcard {
     _id
     topic
     author
@@ -29,7 +29,7 @@ query singleUser($userId: ID!)  {
   user(userId: $userId) {
     _id
     name
-    flashDecks {
+    flashcards {
       _id
       topic
       author
@@ -46,7 +46,7 @@ export const QUERY_ME = gql`
       _id
       name
       role
-      flashDecks
+      flashcards
     }
   }
 `;
