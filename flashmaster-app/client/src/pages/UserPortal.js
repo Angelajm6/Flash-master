@@ -13,15 +13,18 @@ import Auth from '../utils/auth';
 export default function UserPortal() {
     const { userId } = useParams();
 
+    // If there is no `userId` in the URL as a parameter, execute the `QUERY_ME` query instead for the logged in user's information
     const { data, loading } = useQuery(
         userId ? QUERY_SINGLE_USER : QUERY_ME,
         {
             variables: { userId: userId },
         }
     );
-
+  
+    // Check if data is returning from the `QUERY_ME` query, then the `QUERY_SINGLE_USER` query
     const portal = data?.me || data?.portal || {};
 
+      // Use React Router's `<Navigate />` component to redirect to personal portal page if username is yours
     if (Auth.loggedIn() && Auth.getProfile().data._id === userId) {
         return <Navigate to= "/me" />;
     }
@@ -41,7 +44,16 @@ export default function UserPortal() {
 
   return (
     <>
+        <h2 className="card-header">
+            {userId ? `${portal.name}'s` : 'Your' } collection of flash card decks:
+        </h2>
         
+        {portal.flashDecks?.length > 0 && (
+            <Flash
+            flashDecks={portal.flashDecks}
+            ifLoggedInUser={!userId && true}
+            />
+        )}
     </>
   )
 }

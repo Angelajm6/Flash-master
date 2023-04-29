@@ -4,13 +4,13 @@ const { Schema, model } =require('mongoose');
 
 // Schema to set role as either 'Student' or 'Teacher' so we can give the teachers an admin-like role.
 // May need to fix roleSchema
-const roleSchema = new Schema({
-    name: String,
-    owner: [{
-        type: Schema.Types.ObjectId,
-        ref: 'user'
-    }]
-});
+// const roleSchema = new Schema({
+//     name: String,
+//     owner: [{
+//         type: Schema.Types.ObjectId,
+//         ref: 'user'
+//     }]
+// });
 
 const userSchema = new Schema({
     name: {
@@ -45,15 +45,15 @@ const userSchema = new Schema({
             ref: 'flash',
         },
     ],
-    roles: [
+    role:
         {
-            type: Schema.Types.ObjectId,
-            ref: "role",
-        },
-    ],
+            type: String,
+            required: true
+        }
+    
 });
 
 const User = model('user', userSchema);
-const Role = model('role', roleSchema);
 
-module.exports = User,Role;
+
+module.exports = User;
