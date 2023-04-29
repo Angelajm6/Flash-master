@@ -1,34 +1,61 @@
-import React from 'react'
-import FlashCardList from './FlashCardList'
+import React, { useState, useRef } from 'react';
+import FlashCardList from './FlashCard/FlashCardList';
+// import { useQuery } from '@apollo/client';
+// import './FlashCard/FlashCard.css';
 
-export default function index() {
-    const [flashcards, setFlashcards] = useState(SAMPLE_FLASHCARDS)
+// import { QUERY_ME } from './utils/queries';
 
-    const questionEl = useRef()
-    const answerEl = useRef()
 
-    useEffect(() => {
+// Pass users array to the List component as a prop
+export default function Flash() {
 
-    })
 
-function handleSubmit(e) {
+  const [flashcards, setFlashcards] = useState(SAMPLE_FLASHCARDS)
+  // Remove (SAMPLE_FLASHCARDS) and replace with empty array
+
+  const questionEl = useRef()
+  const answerEl = useRef()
+
+  function handleSubmit(e) {
     e.preventDefault()
-}
-
+    // Add flashcard mutation
+  }
   return (
-
     <>
-    {/* Adds the flashcard creation form */}
-    {/* Needs conditional to only appear if the creator of the deck, or on a blank deck */}
-        <form className="header" onSubmit={handleSubmit}>
-            <div className="form-group">
-                <label htmlForm="question" ref={questionEl}>Question</label>
-                <label htmlForm="answer" ref={answerEl}>Answer</label>
-            </div>
-        </form>
-        <div className="container">
-            <FlashCardList flashcards={flashcards} />
+      <form className="createCard" onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="question">Question</label>
+            <input id="question" ref={questionEl}>
+            </input>
+          <label htmlFor="answer">Answer</label>
+          <input id="answer" ref={answerEl}>
+          </input>
         </div>
+        <div className="form-group">
+          <button className="btn">Create</button>
+        </div>
+      </form>
+      <div className="container">
+        <FlashCardList flashcards={flashcards}/>
+      </div>
     </>
-  )
+  );
 }
+
+const SAMPLE_FLASHCARDS = [
+  {
+    id: 1,
+    question: "What's Q1?",
+    answer: 'A1'
+  },
+  {
+    id: 2,
+    question: 'Question 2?',
+    answer: 'Answer 2'
+  },
+  {
+    id: 3,
+    question: 'Q3?',
+    answer: 'Answer 3'
+  }
+];

@@ -3,9 +3,12 @@ const { ROLE } = require('../data')
 function canViewProject(user, project) {
   return (
     user.role === ROLE.ADMIN ||
-    project.userId === user.id
+    project.userId === user.id ||
+    project.isPublic === true ||
+    (user.role === ROLE.BASIC && project.isPublic === true)
   )
 }
+
 
 function scopedProjects(user, projects) {
   if (user.role === ROLE.ADMIN) return projects
@@ -13,7 +16,10 @@ function scopedProjects(user, projects) {
 }
 
 function canDeleteProject(user, project) {
-  return project.userId === user.id
+  return (
+    user.role === ROLE.ADMIN &&
+    project.userId === user.id
+  );
 }
 
 module.exports = {

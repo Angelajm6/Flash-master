@@ -35,13 +35,13 @@ export const ADD_COMMENT = gql`
   }
 `;
 
-export const ADD_FLASHDECK = gql`
-mutation addFlashdeck($userId: ID!, $name: String!, $subject: String!, $flashdeck: [String!]) {
-  addFlashdeck(userId: $userId, name: $name, subject: $subject, flashdeck: $flashdeck) {
+export const ADD_FLASHCARD = gql`
+mutation addFlashcard($userId: ID!, $name: String!, $subject: String!, $Flash: [String!]) {
+  addFlashcard(userId: $userId, name: $name, subject: $subject, Flash: $Flash) {
     _id
     name
     subject
-    flashdeck
+    Flash
   }
 }
 `;
@@ -69,13 +69,13 @@ export const UPDATE_COMMENT = gql`
   }
 `;
 
-export const UPDATE_FLASHDECK = gql`
-  mutation updateFlashdeck($userId: ID!, $name: String!, $subject: String!, $flashdeck: [String!]) {
-    updateFlashdeck(userId: $userId, name: $name, subject: $subject, flashdeck: $flashdeck) {
+export const UPDATE_FLASHCARD = gql`
+  mutation updateFlashcard($userId: ID!, $name: String!, $subject: String!, $Flash: [String!]) {
+    updateFlashcard(userId: $userId, name: $name, subject: $subject, Flash: $Flash) {
       _id
       name
       subject
-      flashdeck
+      Flash
     }
   }
 `;
@@ -103,13 +103,13 @@ export const REMOVE_COMMENT = gql`
   }
 `;
 
-export const REMOVE_FLASHDECK = gql`
-  mutation removeFlashdeck($flashdeck: [String!]) {
-    removeFlashdeck(flashdeck: $flashdeck) {
+export const REMOVE_FLASHCARD = gql`
+  mutation removeFlashcard($Flash: [String!]) {
+    removeFlashcard(Flash: $Flash) {
       _id
       name
       subject
-      flashdeck
+      Flash
     }
   }
 `;
