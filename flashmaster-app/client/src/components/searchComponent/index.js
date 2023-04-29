@@ -2,25 +2,25 @@ import React from 'react';
 import { useState } from 'react';
 import { useQuery } from '@apollo/client';
 import { QUERY_SINGLE_USER } from '../../utils/queries';
-import { QUERY_FLASHDECK } from '../../utils/queries';
+import { QUERY_FLASHCARDS } from '../../utils/queries';
 import { Link } from 'react-router-dom';
 
 const Searchbar = () => {
     const [search, setSearch] = useState('');
     const [result, setResult] = useState([]);
-    const { loading, data } = useQuery(QUERY_SINGLE_USER, QUERY_FLASHDECK);
+    const { loading, data } = useQuery(QUERY_SINGLE_USER, QUERY_FLASHCARDS);
     const users = data?.users || [];
-    const flashdecks = data?.flashdecks || [];
+    const flashcards = data?.flashcards || [];
 
     const handleSearch = (e) => {
         e.preventDefault();
         const searchedUsers = users.filter((user) => {
             return user.name.toLowerCase().includes(search.toLowerCase())
         });
-        const searchedFlashdecks = flashdecks.filter((flashdeck) => {
-            return flashdeck.topic.toLowerCase().includes(search.toLowerCase())
+        const searchedFlashcards = flashcards.filter((flashcard) => {
+            return flashcard.topic.toLowerCase().includes(search.toLowerCase())
         });
-        const searchedResults = [...searchedUsers, ...searchedFlashdecks];
+        const searchedResults = [...searchedUsers, ...searchedFlashcards];
         setResult(searchedResults);
     };
 
