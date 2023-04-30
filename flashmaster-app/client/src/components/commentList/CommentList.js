@@ -2,7 +2,6 @@ import React from 'react';
 import { useMutation } from '@apollo/client';
 
 import { REMOVE_COMMENT } from '../../utils/mutations';
-import { QUERY_ME } from '../../utils/queries';
 
 const CommentList = ({ comments, isLoggedInUser = false }) => {
   const [removeComment, { error }] = useMutation(REMOVE_COMMENT, {
