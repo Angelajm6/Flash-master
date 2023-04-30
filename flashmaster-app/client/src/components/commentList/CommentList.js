@@ -2,15 +2,15 @@ import React from 'react';
 import { useMutation } from '@apollo/client';
 
 import { REMOVE_COMMENT } from '../../utils/mutations';
-import { QUERY_ME } from '../../utils/queries';
+import { QUERY_SINGLE_USER } from '../../utils/queries';
 
 const CommentList = ({ comments, isLoggedInUser = false }) => {
   const [removeComment, { error }] = useMutation(REMOVE_COMMENT, {
     update(cache, { data: { removeComment } }) {
       try {
         cache.writeQuery({
-          query: QUERY_ME,
-          data: { me: removeComment },
+          query: QUERY_SINGLE_USER,
+          data: { user: removeComment },
         });
       } catch (e) {
         console.error(e);
