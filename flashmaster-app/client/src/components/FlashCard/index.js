@@ -3,7 +3,7 @@ import FlashCardList from './FlashCard/FlashCardList';
 // import { useQuery } from '@apollo/client';
 // import './FlashCard/FlashCard.css';
 
-// import { QUERY_ME } from './utils/queries';
+// import { QUERY_SINGLE_USER } from './utils/queries';
 
 
 // Pass users array to the List component as a prop
