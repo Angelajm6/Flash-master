@@ -41,7 +41,7 @@ Feel free to contribute to better improve this application. Fork the repository 
 
 ## Credits
 
-This application has been developed by 5 students of the Columbia Engineering Bootcamp: Angela Jaume, Irene Akram, Matthew Provost, Megan Maccarttney and Taylor Brandon.
+This application has been developed by 5 students of the Columbia Engineering Bootcamp: Angela Jaume, Irene Akram, Matthew Provost, Megan McCartney and Taylor Brandon.
 
 ## Questions
 
