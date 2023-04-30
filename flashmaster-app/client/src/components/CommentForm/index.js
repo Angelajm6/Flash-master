@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
+import { useMutation, useQuery } from '@apollo/client';
+import { QUERY_SINGLE_USER } from '../../utils/queries';
 
 import { ADD_COMMENT } from '../../utils/mutations';
 
@@ -8,12 +9,20 @@ import Auth from '../../utils/auth';
 
 const CommentForm = ({ userId }) => {
   const [comment, setComment] = useState('');
+ 
+  const { data: userData } = useQuery(QUERY_SINGLE_USER, {
+    variables: { userId },
+  });
+
 
   const [addComment, { error }] = useMutation(ADD_COMMENT);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
+    if(!comment) {
+      return;
+    }
     try {
       const data = await addComment({
         variables: { userId, comment },
@@ -27,7 +36,7 @@ const CommentForm = ({ userId }) => {
 
   return (
     <div>
-      <h4>Endorse some more skills below.</h4>
+      <h4>Add Your Comment Below!</h4>
 
       {Auth.loggedIn() ? (
         <form
