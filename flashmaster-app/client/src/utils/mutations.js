@@ -30,7 +30,7 @@ export const ADD_COMMENT = gql`
     addComment(userId: $userId, name: $name, comment: $comment) {
       _id
       name
-      comment
+      commentText
     }
   }
 `;

@@ -9,6 +9,7 @@ const SignUp = () => {
     name: '',
     email: '',
     password: '',
+    subject: '',
     role: 'Teacher',
   });
 
@@ -29,10 +30,10 @@ const SignUp = () => {
 
     try {
       const { data } = await addUser({
-        variable: { ...formState },
+        variables: { ...formState },
       });
 
-      Auth.login(data.addProfile.token);
+      Auth.login(data.addUser.token);
     } catch (e) {
       console.error(e);
     }
@@ -66,6 +67,14 @@ const SignUp = () => {
                   type="email"
                   value={formState.email}
                   onChange={handleChange}
+                />
+                <input
+                className="form-input"
+                placeholder="Your Subject"
+                name="subject"
+                type="subject"
+                value={formState.subject}
+                onChange={handleChange}
                 />
                 <input
                   className="form-input"

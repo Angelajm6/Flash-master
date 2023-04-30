@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [Description](#description)
+- [User Story](#user-story)
 - [Acceptance Criteria](#acceptance-criteria)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -18,8 +19,13 @@ Flash Master aims to help students who may not be well-versed in a subject, need
 Educators and students alike are able to post and engage with educational material. 
 This site allows users to save their favorite study guide flash card decks, interact with published content, and find study materials by searching for keywords. 
 
-We wanted to create a website where users can search flash card decks in one place, favorite these study decks, interact with other users’ content, and have the option to support their favorite teachers by donating to their wishlist. 
+We wanted to create an accessible and educational website where users can search flash card decks in one place, favorite these study decks, interact with other users’ content, and have the option to support their favorite teachers by donating to their wishlist. 
 
+## User Story
+
+As a teacher, I want to create flash card decks for my students to study with, update my study materials, respond to comments made by students, add a QR code to my portal, and view my donation balance so that I can provide an effective and immersive learning experience for my students. 
+  
+As a student, I want to search for specific flash card decks, save my favorites, interact with other users' content, and have the option to support my favorite teachers through donations. 
 
 ## Acceptance Criteria 
 GIVEN A study pack application called Flash Master
@@ -69,7 +75,7 @@ Students are able to save their favorite flash card decks into their collections
 
 All users can join Flash Master with absolutely no cost and can click on the "Word of the Day" button to generate a new word and its definition every time they login. 
 
-This project implements React, GraphQL, and Stripe as requirements for a full stack development course. 
+This project was developed as part of a full-stack development course and implements Apollo, MERN, GraphQL, CSS libraries, JWT, Stripe, and third-party APIs as required technologies. 
 
 
 ## License

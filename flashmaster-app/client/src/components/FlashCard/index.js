@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import FlashCardList from './FlashCardList';
-import { QUERY_FLASHCARDS } from '../../utils/queries';
+import { QUERY_ALL_FLASH } from '../../utils/queries';
 import { UPDATE_FLASHCARD } from '../../utils/mutations';
 import { useQuery, useMutation } from '@apollo/client';
 // import './FlashCard/FlashCard.css';
@@ -16,7 +16,7 @@ export default function Flash() {
   const [question, setQuestion] = useState('');
   const [answer, setAnswer] = useState('');
 
-  const { loading, error, data: queryData } = useQuery(QUERY_FLASHCARDS);
+  const { loading, error, data: queryData } = useQuery(QUERY_ALL_FLASH);
 
   useEffect(() => {
     if (queryData) {
