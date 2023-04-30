@@ -7,7 +7,11 @@ import FlashCardList from './FlashCard/FlashCardList';
 
 
 // Pass users array to the List component as a prop
+<<<<<<< HEAD
 export default function App() {
+=======
+export default function Flash() {
+>>>>>>> 517cc4755c8954e24addda5b2a9b65e48db556ea
   const [flashcards, setFlashcards] = useState(SAMPLE_FLASHCARDS)
   // Remove (SAMPLE_FLASHCARDS) and replace with empty array
 

@@ -7,34 +7,34 @@ import { ADD_COMMENT } from '../../utils/mutations';
 import Auth from '../../utils/auth';
 
 const CommentForm = ({ userId }) => {
-    const [comment, setComment] = useState('');
+  const [comment, setComment] = useState('');
 
-    const [addComment, { error }] = useMutation(ADD_COMMENT);
+  const [addComment, { error }] = useMutation(ADD_COMMENT);
 
-    const handleFormSubmit = async (event) => {
-        event.preventDefault();
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
 
-        try{
-            const data = await addComment({
-                variable: { userId, comment },
-            });
+    try {
+      const data = await addComment({
+        variables: { userId, comment },
+      });
 
-            setComment('');
-        } catch (err) {
-            console.error(err);
-        }
-    };
+      setComment('');
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
-    return (
-        <div>
-            <h4>Add a Comment!</h4>
+  return (
+    <div>
+      <h4>Endorse some more skills below.</h4>
 
-            {Auth.loggedIn() ? (
-                <form
-                className="flex-row justify-center justify-space-between-md align-center"
+      {Auth.loggedIn() ? (
+        <form
+          className="flex-row justify-center justify-space-between-md align-center"
           onSubmit={handleFormSubmit}
         >
-            <div className="col-12 col-lg-9">
+          <div className="col-12 col-lg-9">
             <input
               placeholder="Endorse some skills..."
               value={comment}

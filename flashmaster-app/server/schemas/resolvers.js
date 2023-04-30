@@ -2,7 +2,7 @@ const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/jwtAuth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 const { User, Flash, Comment } = require('../models');
-const { Donation } = require('')
+// const { Donation } = require('')
 
 const resolvers = {
     Query: {
@@ -11,12 +11,6 @@ const resolvers = {
       },
       user: async (parent, { name }) => {
         return User.findOne({ name });
-      },
-      me: async (parent, args, context) => {
-        if (context.user) {
-          return User.findOne({ _id: context.user._id }).populate('flash');
-        }
-        throw new AuthenticationError('You need to be logged in!');
       },
       flashcards: async (parent, { topic, id }) => {
         const params = {};
