@@ -12,6 +12,12 @@
 
 ## Description
 
+Flash Master is an accessible and convenient site for educators and students alike to post and interact with educational material. 
+This site allows users to save their favorite study guide flash card decks, interact with content, and find study materials by searching for keywords. 
+
+We wanted to create a website where users can search flash card decks in one place, favorite these study decks, interact with other users’ content, and have the option to support their favorite teachers by donating to their wishlist. 
+
+
 ## Installation
 
 To run this app locally, download the repository from GitHub and clone it to your local machine.
