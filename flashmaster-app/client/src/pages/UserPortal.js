@@ -5,7 +5,7 @@ import { useQuery } from '@apollo/client';
 
 import Flash from '../components/FlashCard/index';
 
-import { QUERY_SINGLE_USER, QUERY_ME } from '../utils/queries';
+import { QUERY_SINGLE_USER } from '../utils/queries';
 
 import Auth from '../utils/auth';
 
@@ -14,16 +14,16 @@ export default function UserPortal() {
     const { userId } = useParams();
 
     const { data, loading } = useQuery(
-        userId ? QUERY_SINGLE_USER : QUERY_ME,
+        userId ? QUERY_SINGLE_USER:
         {
             variables: { userId: userId },
         }
     );
 
-    const portal = data?.me || data?.portal || {};
+    const portal = data?.user || data?.portal || {};
 
     if (Auth.loggedIn() && Auth.getProfile().data._id === userId) {
-        return <Navigate to= "/me" />;
+        return <Navigate to= "/user" />;
     }
 
     if (loading) {
