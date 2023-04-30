@@ -1,5 +1,5 @@
 import { gql } from '@apollo/client';
-// import { authorizedbuyersmarketplace } from 'googleapis/build/src/apis/authorizedbuyersmarketplace';
+import { authorizedbuyersmarketplace } from 'googleapis/build/src/apis/authorizedbuyersmarketplace';
 
 export const QUERY_USERS =  gql`
 query allUsers {
@@ -38,16 +38,6 @@ query singleUser($userId: ID!)  {
     }
   }
 }
-`;
-
-export const QUERY_ME = gql`
-  query me {
-    me {
-      _id
-      name
-      Flash
-    }
-  }
 `;
 
 export const QUERY_COMMENTS =  gql`

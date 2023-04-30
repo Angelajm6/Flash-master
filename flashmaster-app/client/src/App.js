@@ -1,6 +1,4 @@
-//This is importing react 
-import React from 'react';
-//This imports the styling for the application
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { ChakraProvider } from '@chakra-ui/react';
 import './assets/style.js';
@@ -16,7 +14,6 @@ import {
 import { setContext } from '@apollo/client/link/context';
 //This imports BrowserRouter for routing to other pages in the application
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-//Deleted Navigate because it is not being used 
 
 import Home from './pages/Home'; //imports home page
 import Teacher from './pages/Teacher/Teacher'; //imports teacher file 
@@ -25,6 +22,7 @@ import Signup from './pages/Signup'; //imports signup page
 import Login from './pages/Login'; //imports login
 import Header from './components/Header'; //imports header component
 import Footer from './components/Footer'; //imports footer component
+import Flash from './components/FlashCard/index';
 // import Donation from '../src/pages/Teacher/Donation';
 // import Gallery from '../src/pages/Teacher/Gallery';
 // import cartIndex from '../src/pages/Teacher/Cart/index';
@@ -32,21 +30,6 @@ import Footer from './components/Footer'; //imports footer component
 // import cartServer from '../src/pages/Teacher/Cart/server';
 // import Collections from '../src/pages/Student/Collections';
 
-//this is a function for the routes being protected for different roles
-function ProtectedRoute({ element: Element, role }) {
-  //user role is being defined by grabbing the role in local storage
-  const userRole = localStorage.getItem('role');
-  //this is a conditional that checks is the userRole has been defined, if not, redirected 
-  if (userRole !== role) {
-    return <Route to="/" />;
-  }
-  //This checks if the role is a teacher, if not set to student
-  const Component = role === 'teacher' ? Teacher : Student;
-  //returned to the route for each role
-  return <Route element={<Component />} />;
-}
-
-//creating link for graphql
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
@@ -67,54 +50,57 @@ const client = new ApolloClient({
 });
 
 function App() {
+  const [userRole, setUserRole] = useState(null);
+
+  useEffect(() => {
+    const role = localStorage.getItem('role');
+    setUserRole(role);
+  }, []);
+
   return (
     <ChakraProvider>
     <ApolloProvider client={client}>
-      <Route>
+      <Router>
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
           <div className="container">
-            <Route>
-              <Route 
-                path="/" 
+            <Routes>
+              <Route
+                path="/"
                 element={<Home />}
               />
 
-              <Route 
-                path="/login" 
+              <Route
+                path="/login"
                 element={<Login />}
               />
-              
-              <Route 
-                path="/signup" 
+              <Route
+                path="/signup"
                 element={<Signup />}
               />
-              
-              <ProtectedRoute 
-               path="/teachers/:teacherId" 
-               element={<Teacher />}
-               role="teacher"
-              />
-              
-              <ProtectedRoute 
-                path="/students/:studentId" 
-                element={<Student />}
-                role="student"
-                />
-              
-              <Route 
+              <Route
                 path="/teachers/:teacherId"
                 element={<Teacher />}
               />
               <Route
-              path="/students/:studentId"
-              element={<Student />}
+                path="/students/:studentId"
+                element={<Student />}
               />
-            </Route>
+              <Route
+                path="/me"
+                element={
+                  userRole === 'admin' ? <Teacher /> : <Student />
+                }
+              />
+              <Route
+                path="/teachers/:teacherId/flash"
+                element={<Flash/>}
+              />
+            </Routes>
           </div>
           <Footer />
         </div>
-      </Route>
+      </Router>
     </ApolloProvider>
     </ChakraProvider>
   );

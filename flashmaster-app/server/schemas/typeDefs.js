@@ -46,7 +46,6 @@ type Checkout {
   type Query {
     users: [User]
     user(name: String!): User
-    me(name: String!): User
     flashcards(topic: String!, userId: ID): Flash
     flash(userId: ID): Flash
     comments(name: String): [Comment]
@@ -64,5 +63,6 @@ type Checkout {
     addDonation(userId: ID, teacher: String!, amount: Int): Donation 
   }
 `;
+
 
 module.exports = typeDefs;
