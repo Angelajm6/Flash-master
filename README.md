@@ -69,7 +69,7 @@ Students are able to save their favorite flash card decks into their collections
 
 All users can join Flash Master with absolutely no cost and can click on the "Word of the Day" button to generate a new word and its definition every time they login. 
 
-This project implements React, GraphQL, and Stripe as requirements for a full stack development course. 
+This project was developed as part of a full-stack development course and implements Apollo, MERN, GraphQL, Chakra UI/CSS libraries, JWT, Stripe, and third-party APIs as required technologies. 
 
 
 ## License
