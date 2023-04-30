@@ -56,39 +56,4 @@ export default Student;
 
 
 
-  // Function handles form submission
-//   function handleSubmit(event) {
-//     event.preventDefault();
-//     addFlashcard(question, answer);
-//     setQuestion('');
-//     setAnswer('');
-//   }
-
-//   return (
-//     <form onSubmit={handleSubmit}>
-//       <label>
-//         Question:
-//         <input type="text" value={question} onChange={event => setQuestion(event.target.value)} />
-//       </label>
-//       <label>
-//         Answer:
-//         <input type="text" value={answer} onChange={event => setAnswer(event.target.value)} />
-//       </label>
-//       <button type="submit">Add Flashcard</button>
-//     </form>
-//   );
-// }
-
-// function FlashcardList({ flashcards, removeFlashcard }) {
-//   return (
-//     <div>
-//       {flashcards.map((flashcard, index) => (
-//         <div key={index}>
-//           <h3>{flashcard.question}</h3>
-//           <p>{flashcard.answer}</p>
-//           <button onClick={() => removeFlashcard(index)}>Remove Flashcard</button>
-//         </div>
-//       ))}
-//     </div>
-//   );
 
