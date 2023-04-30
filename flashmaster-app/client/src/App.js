@@ -29,6 +29,7 @@ import Footer from './components/Footer'; //imports footer component
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
+
 //function that grabs token from database to check if the user is authorized 
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem('id_token');
