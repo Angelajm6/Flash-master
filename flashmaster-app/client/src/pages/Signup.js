@@ -9,6 +9,7 @@ const SignUp = () => {
     name: '',
     email: '',
     password: '',
+    subject: '',
     role: 'Teacher',
   });
 
@@ -66,6 +67,14 @@ const SignUp = () => {
                   type="email"
                   value={formState.email}
                   onChange={handleChange}
+                />
+                <input
+                className="form-input"
+                placeholder="Your Subject"
+                name="subject"
+                type="subject"
+                value={formState.subject}
+                onChange={handleChange}
                 />
                 <input
                   className="form-input"

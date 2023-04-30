@@ -6,14 +6,14 @@ import { Link } from 'react-router-dom';
 const Searchbar = () => {
     const [search, setSearch] = useState('');
     const [searchedResults, setSearchedResults] = useState([]);
-    const [searchSingleUser, { loading }] = useLazyQuery(QUERY_SINGLE_USER);
+    const [searchSingleUser, { loading, data }] = useLazyQuery(QUERY_SINGLE_USER);
 
     const handleSearch = (e) => {
         e.preventDefault();
         searchSingleUser({
-            variables: { search },
+            variables: { userID: search },
             onCompleted: (data) => {
-                setSearchedResults(data.users || []);
+                setSearchedResults(data.users);
             }
         });
     };
@@ -34,20 +34,22 @@ const Searchbar = () => {
             ) : (
                 <ul>
                     {searchedResults.length > 0 ? (
-                        searchedResults.map((result) => (
-                            <li key={result._id}>
-                                <Link to={`/users/${result._id}`}>
-                                    {result.username}
-                                </Link>
-                            </li>
-                        ))
+                        <ul>
+                            {searchedResults.map((result) => (
+                                <li key={result._id}>
+                                    <Link to={`/users/${result._id}`}>
+                                        {result.username}
+                                    </Link> 
+                                </li>
+                            ))}
+                        </ul>
                     ) : search && (
                         <div>No results found.</div>
                     )}
                 </ul>
             )}
             {!search && (
-                <div>Please enter a Term</div>
+                <div>Please Enter A User Name</div>
             )}
         </div>
     );

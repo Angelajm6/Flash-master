@@ -7,7 +7,10 @@ import Auth from '../../utils/auth';
 import SearchBar from '../searchComponent/index';
 
 const Header = () => {
-  const { loading, error, data } = useQuery(QUERY_SINGLE_USER);
+  const userId = Auth.getProfile().data._id;
+  const { loading, error, data } = useQuery(QUERY_SINGLE_USER, {
+    variables: { userId },
+  });
 
   const logout = (event) => {
     event.preventDefault();
