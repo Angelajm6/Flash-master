@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { ChakraProvider } from '@chakra-ui/react';
-import './assets/style.js';
 //import './assets/style.jsx';
 //This imports ApolloClient, InMemory Cache, ApolloProvider, and createHttpLink
 import {
@@ -60,7 +58,6 @@ function App() {
   return (
     
     <ApolloProvider client={client}>
-      <ChakraProvider>
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
@@ -102,7 +99,6 @@ function App() {
           <Footer />
         </div>
       </Router>
-      </ChakraProvider>
     </ApolloProvider>
     
   );
