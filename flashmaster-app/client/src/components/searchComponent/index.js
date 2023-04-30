@@ -13,7 +13,7 @@ const Searchbar = () => {
         searchSingleUser({
             variables: { search },
             onCompleted: (data) => {
-                setSearchedResults(data.users);
+                setSearchedResults(data.users || []);
             }
         });
     };
@@ -34,22 +34,20 @@ const Searchbar = () => {
             ) : (
                 <ul>
                     {searchedResults.length > 0 ? (
-                        <ul>
-                            {searchedResults.map((result) => (
-                                <li key={result._id}>
-                                    <Link to={`/users/${result._id}`}>
-                                        {result.username}
-                                    </Link> 
-                                </li>
-                            ))}
-                        </ul>
+                        searchedResults.map((result) => (
+                            <li key={result._id}>
+                                <Link to={`/users/${result._id}`}>
+                                    {result.username}
+                                </Link>
+                            </li>
+                        ))
                     ) : search && (
                         <div>No results found.</div>
                     )}
                 </ul>
             )}
             {!search && (
-                <div>Please Enter A User Name</div>
+                <div>Please enter a Term</div>
             )}
         </div>
     );
