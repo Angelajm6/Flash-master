@@ -18,7 +18,7 @@ Flash Master aims to help students who may not be well-versed in a subject, need
 Educators and students alike are able to post and engage with educational material. 
 This site allows users to save their favorite study guide flash card decks, interact with published content, and find study materials by searching for keywords. 
 
-We wanted to create a website where users can search flash card decks in one place, favorite these study decks, interact with other users’ content, and have the option to support their favorite teachers by donating to their wishlist. 
+We wanted to create an accessible and educational website where users can search flash card decks in one place, favorite these study decks, interact with other users’ content, and have the option to support their favorite teachers by donating to their wishlist. 
 
 
 ## Acceptance Criteria 
@@ -69,7 +69,7 @@ Students are able to save their favorite flash card decks into their collections
 
 All users can join Flash Master with absolutely no cost and can click on the "Word of the Day" button to generate a new word and its definition every time they login. 
 
-This project implements React, GraphQL, and Stripe as requirements for a full stack development course. 
+This project was developed as part of a full-stack development course and implements Apollo, MERN, GraphQL, Chakra UI/CSS libraries, JWT, Stripe, and third-party APIs as required technologies. 
 
 
 ## License
