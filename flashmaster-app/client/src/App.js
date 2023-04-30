@@ -58,8 +58,9 @@ function App() {
   }, []);
 
   return (
-    <ChakraProvider>
+    
     <ApolloProvider client={client}>
+      <ChakraProvider>
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
@@ -101,8 +102,9 @@ function App() {
           <Footer />
         </div>
       </Router>
+      </ChakraProvider>
     </ApolloProvider>
-    </ChakraProvider>
+    
   );
 }
 
