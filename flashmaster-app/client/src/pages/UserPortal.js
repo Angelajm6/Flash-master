@@ -5,7 +5,7 @@ import { useQuery } from '@apollo/client';
 
 import Flash from '../components/FlashCard/index';
 
-import { QUERY_SINGLE_USER, QUERY_ME } from '../utils/queries';
+import { QUERY_SINGLE_USER } from '../utils/queries';
 
 import Auth from '../utils/auth';
 
@@ -15,18 +15,19 @@ export default function UserPortal() {
 
     // If there is no `userId` in the URL as a parameter, execute the `QUERY_ME` query instead for the logged in user's information
     const { data, loading } = useQuery(
-        userId ? QUERY_SINGLE_USER : QUERY_ME,
+        userId ? QUERY_SINGLE_USER:
         {
             variables: { userId: userId },
         }
     );
+
+    // Check if data is returning from the `QUERY_SINGLE_USER` query
+    const portal = data?.user || data?.portal || {};
   
-    // Check if data is returning from the `QUERY_ME` query, then the `QUERY_SINGLE_USER` query
-    const portal = data?.me || data?.portal || {};
 
       // Use React Router's `<Navigate />` component to redirect to personal portal page if username is yours
     if (Auth.loggedIn() && Auth.getProfile().data._id === userId) {
-        return <Navigate to= "/me" />;
+        return <Navigate to= "/user" />;
     }
 
     if (loading) {
