@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import { ChakraProvider } from '@chakra-ui/react';
+import './assets/style.js';
+//import './assets/style.jsx';
 //This imports ApolloClient, InMemory Cache, ApolloProvider, and createHttpLink
 import {
   ApolloClient,
@@ -19,6 +22,7 @@ import Signup from './pages/Signup'; //imports signup page
 import Login from './pages/Login'; //imports login
 import Header from './components/Header'; //imports header component
 import Footer from './components/Footer'; //imports footer component
+import Flash from './components/FlashCard/index';
 // import Donation from '../src/pages/Teacher/Donation';
 // import Gallery from '../src/pages/Teacher/Gallery';
 // import cartIndex from '../src/pages/Teacher/Cart/index';
@@ -54,6 +58,7 @@ function App() {
   }, []);
 
   return (
+    <ChakraProvider>
     <ApolloProvider client={client}>
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
@@ -64,6 +69,7 @@ function App() {
                 path="/"
                 element={<Home />}
               />
+
               <Route
                 path="/login"
                 element={<Login />}
@@ -86,12 +92,17 @@ function App() {
                   userRole === 'admin' ? <Teacher /> : <Student />
                 }
               />
+              <Route
+                path="/teachers/:teacherId/flash"
+                element={<Flash/>}
+              />
             </Routes>
           </div>
           <Footer />
         </div>
       </Router>
     </ApolloProvider>
+    </ChakraProvider>
   );
 }
 
