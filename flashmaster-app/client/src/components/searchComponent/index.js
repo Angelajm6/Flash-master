@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Searchbar = () => {
     const [search, setSearch] = useState('');
     const [searchedResults, setSearchedResults] = useState([]);
-    const [searchSingleUser, { loading, data }] = useLazyQuery(QUERY_SINGLE_USER);
+    const [searchSingleUser, { loading }] = useLazyQuery(QUERY_SINGLE_USER);
 
     const handleSearch = (e) => {
         e.preventDefault();
