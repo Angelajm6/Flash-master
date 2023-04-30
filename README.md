@@ -65,7 +65,7 @@ To use the website deployed through Heroku, use the link below:
 This website is used as an educational platform for educators and students to share and engage in academic resources. 
 Users can either login to their account as a teacher or student and create flash card decks on the subjects they are currently interested in. By entering the keywords of a subject into the search engine, students can search for specific topics and the title of a subject, teacher's name, and flash deck will be generated on the page. 
 
-Students are able to favorite their favorite flash card decks into their collections viewed on their Student Portal and comment under these study decks for clarification. Students are also given the option to donate to their favorite teacher's wishlist. Teachers are able to create, edit, and delete their flash cards. Teachers can generate a QR code to share their content on Flash Master with their students. They can also view their wishlist balance on their donation's page. 
+Students are able to save their favorite flash card decks into their collections viewed on their Student Portal and comment under these study decks for clarification. Students are also given the option to donate to their favorite teacher's wishlist. Teachers are able to create, edit, and delete their flash cards. Teachers can generate a QR code to share their content on Flash Master with their students. They can also view their wishlist balance on their donation's page. 
 
 All users can join Flash Master with absolutely no cost and can click on the "Word of the Day" button to generate a new word and its definition every time they login. 
 
