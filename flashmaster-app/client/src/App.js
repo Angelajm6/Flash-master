@@ -3,6 +3,7 @@ import React from 'react';
 //This imports the styling for the application
 import './App.css';
 import { ChakraProvider } from '@chakra-ui/react';
+import './assets/style';
 //This imports ApolloClient, InMemory Cache, ApolloProvider, and createHttpLink
 import {
   ApolloClient,
