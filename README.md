@@ -37,7 +37,7 @@ npm run start
 
 This application is licensed under the MIT License.
 
-## Contributing
+## Contribution
 
 Feel free to contribute to better improve this application. Fork the repository to your GitHub account. Clone the forked repository to your local machine. Create a new branch for your changes and push them to your forked repository. Then submit a pull request to the original repository.
 
