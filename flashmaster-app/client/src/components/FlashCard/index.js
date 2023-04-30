@@ -8,8 +8,6 @@ import FlashCardList from './FlashCard/FlashCardList';
 
 // Pass users array to the List component as a prop
 export default function Flash() {
-
-
   const [flashcards, setFlashcards] = useState(SAMPLE_FLASHCARDS)
   // Remove (SAMPLE_FLASHCARDS) and replace with empty array
 
