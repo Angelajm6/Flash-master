@@ -1,26 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
-import { QUERY_SINGLE_USER } from '../../utils/queries';
+//import { useQuery } from '@apollo/client';
+//import { QUERY_SINGLE_USER } from '../../utils/queries';
 
 import Auth from '../../utils/auth';
 import SearchBar from '../searchComponent/index';
 
 const Header = () => {
-  const userId = Auth.getProfile().data._id;
-  const { loading, error, data } = useQuery(QUERY_SINGLE_USER, {
-    variables: { userId },
-  });
-
   const logout = (event) => {
     event.preventDefault();
     Auth.logout();
   };
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
-
-  const { user } = data;
 
   return (
     <header className="bg-info text-dark mb-4 py-3 display-flex align-center">
@@ -33,8 +23,8 @@ const Header = () => {
         <div>
           {Auth.loggedIn() ? (
             <>
-              <Link className="btn btn-lg btn-primary m-2" to={`/user/${user._id}`}>
-                {user.role === 'admin' ? 'Admin Portal' : 'Basic Portal'}
+              <Link className="btn btn-lg btn-primary m-2" to="/me">
+                View My Profile
               </Link>
               <button className="btn btn-lg btn-light m-2" onClick={logout}>
                 Logout
