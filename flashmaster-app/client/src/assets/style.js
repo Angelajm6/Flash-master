@@ -35,6 +35,15 @@ const IndexPage = () => (
              spacing={10} 
              alignItems="flex-start"
              bg="gray.50">
+                <VStack alignItems="flex-start" spacing={3}>
+                    <Heading size="2x1">Your Donation</Heading>
+                    <Text>
+                        If the price is too hard on you eyes,
+                        <Button variant="link" colorScheme="black">
+                            
+                        </Button>
+                    </Text>
+                </VStack>
             </VStack>
         </Flex>
     </Container>
@@ -133,8 +142,6 @@ const Donation = () =>{
                 <Button size="lg">Place Donation</Button>
             </GridItem>
         </SimpleGrid>
-
-
 </VStack>
     )
 };

@@ -4,7 +4,7 @@ import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../../utils/mutations';
 import Auth from '../../utils/auth';
 import Stripe from 'stripe';
-import { Donation } from '../../assets/style';
+import Donation from '../../assets/style';
 
 const stripe = Stripe('pk_test_51N1eLfJPgoVjPZw2aIeOMdDZRtMsD4yfMSIJy7KJneZp7YyDC6meuYVvMMhXQelvinIrn0aIqbe9fdQP7WyJxqpZ00e1dM6Szc');
 
