@@ -18,14 +18,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-<<<<<<< HEAD
-    "concurrently": "^5.3.0",
-    "child_process": "^1.0.2"
-  },
-  "dependencies": {}
-=======
     "concurrently": "^5.3.0"
   }
   
->>>>>>> main
 }
