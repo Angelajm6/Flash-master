@@ -1,8 +1,5 @@
 import { gql } from '@apollo/client';
-<<<<<<< HEAD
 //import { authorizedbuyersmarketplace } from 'googleapis/build/src/apis/authorizedbuyersmarketplace';
-=======
->>>>>>> main
 
 export const QUERY_USERS =  gql`
 query allUsers {
@@ -52,11 +49,6 @@ query singleUser($name: String!)  {
   user(name: $name) {
     _id
     name
-<<<<<<< HEAD
-=======
-    email
-    subject
->>>>>>> main
     role
     Flash {
       _id
