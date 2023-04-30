@@ -53,7 +53,3 @@ function FlashcardList({ flashcards, addFavorite, removeFlashcard }) {
 }
 
 export default Student;
-
-
-
-
