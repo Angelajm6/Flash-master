@@ -3,7 +3,8 @@ import React from 'react';
 //This imports the styling for the application
 import './App.css';
 import { ChakraProvider } from '@chakra-ui/react';
-import './assets/style';
+import './assets/style.js';
+//import './assets/style.jsx';
 //This imports ApolloClient, InMemory Cache, ApolloProvider, and createHttpLink
 import {
   ApolloClient,
@@ -78,10 +79,12 @@ function App() {
                 path="/" 
                 element={<Home />}
               />
+
               <Route 
                 path="/login" 
                 element={<Login />}
               />
+              
               <Route 
                 path="/signup" 
                 element={<Signup />}
@@ -92,7 +95,6 @@ function App() {
                element={<Teacher />}
                role="teacher"
               />
-              
               
               <ProtectedRoute 
                 path="/students/:studentId" 
