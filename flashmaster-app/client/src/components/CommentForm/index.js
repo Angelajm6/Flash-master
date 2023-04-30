@@ -21,7 +21,7 @@ const CommentForm = ({ userId }) => {
     event.preventDefault();
 
     if(!comment) {
-      return;
+      return false;
     }
     try {
       const data = await addComment({
