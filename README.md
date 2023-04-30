@@ -12,10 +12,14 @@
 
 ## Description
 
-Flash Master is an accessible and convenient site for educators and students alike to post and interact with educational material. 
-This site allows users to save their favorite study guide flash card decks, interact with content, and find study materials by searching for keywords. 
+Flash Master is an accessible and convenient site for educators and students alike to post and engage with educational material. 
+This site allows users to save their favorite study guide flash card decks, interact with published content, and find study materials by searching for keywords. 
+
+Flash Master aims to help students who may not be well-versed in a subject, need extra help, or need to review study materials by providing a platform for educators to share free academic resources. 
 
 We wanted to create a website where users can search flash card decks in one place, favorite these study decks, interact with other users’ content, and have the option to support their favorite teachers by donating to their wishlist. 
+
+
 
 
 ## Installation
