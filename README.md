@@ -14,10 +14,10 @@
 
 Flash Master aims to help students who may not be well-versed in a subject, need extra assistance, or need to review study materials by providing a platform for educators to share free academic resources. 
 
+We wanted to create a website where users can search flash card decks in one place, favorite these study decks, interact with other users’ content, and have the option to support their favorite teachers by donating to their wishlist. 
+
 Educators and students alike are able to post and engage with educational material. 
 This site allows users to save their favorite study guide flash card decks, interact with published content, and find study materials by searching for keywords. 
-
-We wanted to create a website where users can search flash card decks in one place, favorite these study decks, interact with other users’ content, and have the option to support their favorite teachers by donating to their wishlist. 
 
 
 ## Installation
