@@ -40,10 +40,15 @@ const IndexPage = () => (
                     <Text>
                         If the price is too hard on you eyes,
                         <Button variant="link" colorScheme="black">
-                            
+                            try changing the theme.
                         </Button>
                     </Text>
                 </VStack>
+                <HStack spacing={6} alignItems="center" w="full">
+                    <AspectRatio>
+                        
+                    </AspectRatio>
+                </HStack>
             </VStack>
         </Flex>
     </Container>

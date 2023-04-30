@@ -1,17 +1,24 @@
 import { gql } from '@apollo/client';
-import { authorizedbuyersmarketplace } from 'googleapis/build/src/apis/authorizedbuyersmarketplace';
 
 export const QUERY_USERS =  gql`
 query allUsers {
   users {
     _id
     name
+    email
     subject
-    Flash
+    role
+    Flash {
+      _id
+      topic
+      author
+      createdAt
+      comments
+    }
   }
 }
 `;
-export const QUERY_FLASHCARDS =  gql`
+export const QUERY_ALL_FLASH =  gql`
 query allFlash {
   Flash {
     _id
@@ -23,12 +30,27 @@ query allFlash {
 }
 `;
 
+export const QUERY_SINGLE_FLASH = gql`
+query singleFlash($topic: String!) {
+  Flash(topic: $topic) {
+    _id
+    topic
+    author
+    createdAt
+    comments
+  }
+}
+`;
+
 
 export const QUERY_SINGLE_USER =  gql`
-query singleUser($userId: ID!)  {
-  user(userId: $userId) {
+query singleUser($name: String!)  {
+  user(name: $name) {
     _id
     name
+    email
+    subject
+    role
     Flash {
       _id
       topic
@@ -53,8 +75,8 @@ query allComments {
 `;
 
 export const QUERY_SINGLE_COMMENT =  gql`
-query singleComment {
-  Comment {
+query singleComment($author: String!) {
+  Comment(author: $author) {
     _id
     Flash
     author
