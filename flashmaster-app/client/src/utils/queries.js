@@ -40,16 +40,6 @@ query singleUser($userId: ID!)  {
 }
 `;
 
-export const QUERY_ME = gql`
-  query me {
-    me {
-      _id
-      name
-      Flash
-    }
-  }
-`;
-
 export const QUERY_COMMENTS =  gql`
 query allComments {
   Comments {
