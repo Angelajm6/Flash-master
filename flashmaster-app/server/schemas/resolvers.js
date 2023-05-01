@@ -102,11 +102,18 @@ const resolvers = {
 
     },
     Mutation: {
+<<<<<<< HEAD
+      addUser: async (parent, { name, email, password, role, subject }) => {
+        const user = await User.create({ name, email, password, role, subject });
+        const token = signToken(user);
+        return { token, user };      
+=======
         addUser: async (parent, {name, email, password, role, subject}) => {
             const user = await User.create(name, email, password, role, subject);
             const token = signToken(user);
 
             return { token, user };
+>>>>>>> main
           },
         updateUser: async (parent, args, context) => {
             if (context.user) {

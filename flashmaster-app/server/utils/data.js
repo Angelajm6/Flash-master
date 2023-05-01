@@ -35,7 +35,11 @@ const ROLE = {
     projects: [
       { id: 101, name: ["American Revolution", "Titanic", "Civil War", "The Boxer Rebellion", "WW1"], userId: 101 },
       { id: 102, name: ["The Great Gatsby", "The Grapes of Wrath", "To Kill a Mockingbird", "Catcher in the Rye", "Little Women"], userId: 102 },
+<<<<<<< HEAD
+      { id: 103, name: ["Algebra 1", "Calculus 1", "Geometry", "Algebra 2", "AP Calculus"], userId: 103 },
+=======
       { id: 103, name: ["Algebra 1", "Calculus 1", "Geometry", "Algebra 2", " AP Calculus"], userId: 103 },
+>>>>>>> main
       { id: 104, name: ["Physics 1", "Biology", "Chemistry", "AP Chem", "AP Biology"], userId: 104 },
       { id: 105, name: ["MLA Citation", "Grammar", "Sentence Structure", "Composition", "Research"], userId: 105 },
       { id: 106, name: ["Supply & Demand", "Trickle Down Economics", "The Great Depression", "Inflation", "Economic Laws"], userId: 106 },
@@ -43,5 +47,10 @@ const ROLE = {
       { id: 108, name: ["Constitutional Convention", "The Bill of Rights", "Separation of Powers", "Legislative Branch", "Judicial Branch"], userId: 108 },
       { id: 109, name: ["Civil Rights", "Jim Crow", "Segregation", "Civil War", "Pearl Harbor"], userId: 109 },
       { id: 110, name: ["Nutrition", "Disease", "Viruses", "Bacteria", "SexEd"], userId: 110 },
+<<<<<<< HEAD
+    ],
+    
+=======
     ],    
+>>>>>>> main
   }

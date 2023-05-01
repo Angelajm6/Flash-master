@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+<<<<<<< HEAD
+//import './assets/style.jsx';
+=======
+>>>>>>> main
 //This imports ApolloClient, InMemory Cache, ApolloProvider, and createHttpLink
 import {
   ApolloClient,
