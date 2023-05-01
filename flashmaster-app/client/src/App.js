@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-<<<<<<< HEAD
 //import './assets/style.jsx';
-=======
->>>>>>> main
 //This imports ApolloClient, InMemory Cache, ApolloProvider, and createHttpLink
 import {
   ApolloClient,
@@ -23,7 +20,7 @@ import Signup from './pages/Signup'; //imports signup page
 import Login from './pages/Login'; //imports login
 import Header from './components/Header'; //imports header component
 import Footer from './components/Footer'; //imports footer component
-import Flash from './components/FlashCard/index';
+//import Flash from './components/FlashCard/index';
 // import Donation from '../src/pages/Teacher/Donation';
 // import Gallery from '../src/pages/Teacher/Gallery';
 // import cartIndex from '../src/pages/Teacher/Cart/index';
@@ -93,10 +90,6 @@ function App() {
                 element={
                   userRole === 'admin' ? <Teacher /> : <Student />
                 }
-              />
-              <Route
-                path="/teachers/:teacherId/flash"
-                element={<Flash/>}
               />
             </Routes>
           </div>

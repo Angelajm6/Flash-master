@@ -60,13 +60,8 @@ type Checkout {
     checkout(userId: ID, donation_amount: Int): Checkout
   }
 
-<<<<<<< HEAD
   type Mutation { 
     addUser(name: String!, subject: String!, role: String!, email: String!, password: String!): Auth
-=======
-  type Mutation {
-    addUser(name: String!, email: String!, password: String!, role: String!, subject: String!): Auth
->>>>>>> main
     updateUser(name: String, subject: String, _id: ID, email: String, password: String, role: String, Flash: [String]!): User
     login(email: String!, password: String!): Auth
     addComment(commentId: ID!, commentText: String!, commentAuthor: String!): Comment
