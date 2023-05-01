@@ -14,19 +14,13 @@ import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home'; //imports home page
-import Teacher from './pages/Teacher/Teacher'; //imports teacher file 
+import Teacher from './pages/Teacher/Teacher'; 
 import Student from './pages/Student/Student' //imports student file
 import Signup from './pages/Signup'; //imports signup page
 import Login from './pages/Login'; //imports login
 import Header from './components/Header'; //imports header component
 import Footer from './components/Footer'; //imports footer component
-//import Flash from './components/FlashCard/index';
-// import Donation from '../src/pages/Teacher/Donation';
-// import Gallery from '../src/pages/Teacher/Gallery';
-// import cartIndex from '../src/pages/Teacher/Cart/index';
-// import cartResolvers from '../src/pages/Teacher/Cart/resolvers';
-// import cartServer from '../src/pages/Teacher/Cart/server';
-// import Collections from '../src/pages/Student/Collections';
+
 
 const httpLink = createHttpLink({
   uri: '/graphql',
