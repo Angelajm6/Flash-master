@@ -10,11 +10,6 @@ import Auth from '../../utils/auth';
 const CommentForm = ({ userId }) => {
   const [comment, setComment] = useState('');
  
-  const { data: userData } = useQuery(QUERY_SINGLE_USER, {
-    variables: { userId },
-  });
-
-
   const [addComment, { error }] = useMutation(ADD_COMMENT);
 
   const handleFormSubmit = async (event) => {
