@@ -1,0 +1,252 @@
+[
+    {
+        "author": "Alberto Harrison",
+        "id": 1,
+        "topic": "American Revolution"
+    },
+    {
+        "author": "Alberto Harrison",
+        "id": 2,
+        "topic": "Titanic"
+    },
+    {
+        "author": "Alberto Harrison",
+        "id": 3,
+        "topic": "Civil War"
+    },
+    {
+        "author": "Alberto Harrison",
+        "id": 4,
+        "topic": "The Boxer Rebellion"
+    },
+    {
+        "author": "Alberto Harrison",
+        "id": 5,
+        "topic": "WW1"
+    },
+    {
+        "author": "Abigail Carter",
+        "id": 6,
+        "topic": "The Great Gatsby"
+    }, 
+    {
+        "author": "Abigail Carter",
+        "id": 7,
+        "topic": "The Grapes of Wrath"
+    },
+    {
+        "author": "Abigail Carter",
+        "id": 8,
+        "topic": "To Kill a Mockingbird"
+    },
+    {
+        "author": "Abigail Carter",
+        "id": 9,
+        "topic": "Catcher in the Rye"
+    },
+    {
+        "author": "Abigail Carter",
+        "id": 10,
+        "topic": "Little Women"
+    },
+    {
+        "author": "Allen Barber",
+        "id": 11,
+        "topic": "Algebra 1"
+    },
+    {
+        "author": "Allen Barber",
+        "id": 12,
+        "topic": "Calculus 1"
+    },
+    {
+        "author": "Allen Barber",
+        "id": 13,
+        "topic": "Geometry"
+    },
+    {
+        "author": "Allen Barber",
+        "id": 14,
+        "topic": "Algebra 2"
+    },
+    {
+        "author": "Allen Barber",
+        "id": 15,
+        "topic": " AP Calculus"
+    },
+    {
+        "author": "Brenda Wang",
+        "id": 16,
+        "topic": "Physics 1"
+    },
+    {
+        "author": "Brenda Wang",
+        "id": 17,
+        "topic": "Biology"
+    },
+    {
+        "author": "Brenda Wang",
+        "id": 18,
+        "topic": "Chemistry"
+    },
+    {
+        "author": "Brenda Wang",
+        "id": 19,
+        "topic": "AP Chem"
+    },
+    {
+        "author": "Brenda Wang",
+        "id": 20,
+        "topic": "AP Biology"
+    },
+    {
+        "author": "Betty Hansen",
+        "id": 21,
+        "topic": "MLA Citation"
+    },
+    {
+        "author": "Betty Hansen",
+        "id": 22,
+        "topic": "Grammar"
+    },
+    {
+        "author": "Betty Hansen",
+        "id": 23,
+        "topic": "Sentence Structure"
+    },
+    {
+        "author": "Betty Hansen",
+        "id": 24,
+        "topic": "Composition"
+    },
+    {
+        "author": "Betty Hansen",
+        "id": 25,
+        "topic": "Research"
+    },
+    {
+        "author": "Cathy Johnson",
+        "id": 26,
+        "topic": "Supply & Demand"
+    },
+    {
+        "author": "Cathy Johnson",
+        "id": 27,
+        "topic": "Trickle Down Economics"
+    },
+    {
+        "author": "Cathy Johnson",
+        "id": 28,
+        "topic": "The Great Depression"
+    },
+    {
+        "author": "Cathy Johnson",
+        "id": 29,
+        "topic": "Inflation"
+    },
+    {
+        "author": "Cathy Johnson",
+        "id": 30,
+        "topic": "Economic Laws"
+    },
+    {
+        "author": "Cindy Rogers",
+        "id": 31,
+        "topic": "French Grammar"
+    },
+    {
+        "author": "Cindy Rogers",
+        "id": 32,
+        "topic": "Conjugations"
+    },
+    {
+        "author": "Cindy Rogers",
+        "id": 33,
+        "topic":  "French Verbs"
+    },
+    {
+        "author": "Cindy Rogers",
+        "id": 34,
+        "topic": "French Adjectives"
+    },
+    {
+        "author": "Cindy Rogers",
+        "id": 35,
+        "topic": "Conversation"
+    }, 
+    {
+        "author": "Jack Webster",
+        "id": 36,
+        "topic": "Constitutional Convention"
+    },
+    {
+        "author": "Jack Webster",
+        "id": 37,
+        "topic": "The Bill of Rights"
+    },
+    {
+        "author": "Jack Webster",
+        "id": 38,
+        "topic":  "Separation of Powers"
+    },
+    {
+        "author": "Jack Webster",
+        "id": 39,
+        "topic": "Legislative Branch"
+    },
+    {
+        "author": "Jack Webster",
+        "id": 40,
+        "topic": "Judicial Branch"
+    },
+    {
+        "author": "Rob Williams",
+        "id": 41,
+        "topic": "Civil Rights"
+    },
+    {
+        "author": "Rob Williams",
+        "id": 42,
+        "topic": "Jim Crow"
+    },
+    {
+        "author": "Rob Williams",
+        "id": 43,
+        "topic": "Segregation"
+    },
+    {
+        "author": "Rob Williams",
+        "id": 44,
+        "topic": "Civil War"
+    },
+    {
+        "author": "Rob Williams",
+        "id": 45,
+        "topic": "Pearl Harbor"
+    },
+    {
+        "author": "Jenny Swift",
+        "id": 46,
+        "topic": "Nutrition"
+    },
+    {
+        "author": "Jenny Swift",
+        "id": 47,
+        "topic": "Disease"
+    },
+    {
+        "author": "Jenny Swift",
+        "id": 48,
+        "topic": "Viruses"
+    },
+    {
+        "author": "Jenny Swift",
+        "id": 49,
+        "topic": "Bacteria"
+    },
+    {
+        "author": "Jenny Swift",
+        "id": 50,
+        "topic": "SexEd"
+    }
+]
