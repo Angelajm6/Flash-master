@@ -1,26 +1,14 @@
-<<<<<<< HEAD
-import React, { useState, useRef, useEffect } from 'react';
-import FlashCardList from './FlashCardList';
-import { QUERY_ALL_FLASH } from '../../utils/queries';
-import { UPDATE_FLASHCARD } from '../../utils/mutations';
-import { useQuery, useMutation } from '@apollo/client';
-// import './FlashCard/FlashCard.css';
-=======
+
 // import React, { useState, useRef, useEffect } from 'react';
 // import FlashCardList from './FlashCardList';
 // import { QUERY_FLASHCARDS } from '../../utils/queries';
 // import { UPDATE_FLASHCARD } from '../../utils/mutations';
 // import { useQuery, useMutation } from '@apollo/client';
 // // import './FlashCard/FlashCard.css';
->>>>>>> main
-
 
 // // import { QUERY_SINGLE_USER } from './utils/queries';
 
 
-<<<<<<< HEAD
-  const { loading, error, data: queryData } = useQuery(QUERY_ALL_FLASH);
-=======
 // // Pass users array to the List component as a prop
 // export default function Flash() {
 //   // const [flashcards, setFlashcards] = useState(SAMPLE_FLASHCARDS)
@@ -28,7 +16,30 @@ import { useQuery, useMutation } from '@apollo/client';
 //   const [flashcards, setFlashcards] = useState(null);
 //   const [question, setQuestion] = useState('');
 //   const [answer, setAnswer] = useState('');
->>>>>>> main
+
+//   const { loading, error, data: queryData } = useQuery(QUERY_FLASHCARDS);
+
+//   useEffect(() => {
+//     if (queryData) {
+//       setFlashcards(queryData.cards);
+//     }
+//   }, [queryData]);
+
+//   const [addCard, { data }] = useMutation(UPDATE_FLASHCARD);
+
+
+
+
+// // import { QUERY_SINGLE_USER } from './utils/queries';
+
+
+// // Pass users array to the List component as a prop
+// export default function Flash() {
+//   // const [flashcards, setFlashcards] = useState(SAMPLE_FLASHCARDS)
+//   // Remove (SAMPLE_FLASHCARDS) and replace with empty array
+//   const [flashcards, setFlashcards] = useState(null);
+//   const [question, setQuestion] = useState('');
+//   const [answer, setAnswer] = useState('');
 
 
 //   const { loading, error, data: queryData } = useQuery(QUERY_FLASHCARDS);
@@ -92,8 +103,6 @@ import { useQuery, useMutation } from '@apollo/client';
 //   );
 // }
 
-<<<<<<< HEAD
-
 // const SAMPLE_FLASHCARDS = [
 //   {
 //     id: 1,
@@ -111,22 +120,3 @@ import { useQuery, useMutation } from '@apollo/client';
 //     answer: 'Answer 3'
 //   }
 // ];
-=======
-// // const SAMPLE_FLASHCARDS = [
-// //   {
-// //     id: 1,
-// //     question: "What's Q1?",
-// //     answer: 'A1'
-// //   },
-// //   {
-// //     id: 2,
-// //     question: 'Question 2?',
-// //     answer: 'Answer 2'
-// //   },
-// //   {
-// //     id: 3,
-// //     question: 'Q3?',
-// //     answer: 'Answer 3'
-// //   }
-// // ];
->>>>>>> main

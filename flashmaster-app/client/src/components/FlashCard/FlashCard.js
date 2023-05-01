@@ -1,7 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './FlashCard.css';
 
-export default function FlashCard({ flashcard }) {
+export default function FlashCard({ flashcard, onDelete }) {
+    function handleDeleteClick() {
+        onDelete(flashcard);
+    }
     // Sets default status to !flip to show question first.
     const [flip, setFlip] = useState(false)
     // Sets initial height of flashcard
@@ -33,6 +36,7 @@ export default function FlashCard({ flashcard }) {
             {flashcard.question}
         </div>
         <div className="back" ref={backEl}>{flashcard.answer}</div>
+        <button className="delete-btn" onClick={handleDeleteClick}>Delete</button>
 
       
     </div>
