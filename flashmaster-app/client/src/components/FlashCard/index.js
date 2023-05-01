@@ -1,3 +1,4 @@
+
 // import React, { useState, useRef, useEffect } from 'react';
 // import FlashCardList from './FlashCardList';
 // import { QUERY_FLASHCARDS } from '../../utils/queries';
@@ -17,6 +18,32 @@
 //   const [answer, setAnswer] = useState('');
 
 //   const { loading, error, data: queryData } = useQuery(QUERY_FLASHCARDS);
+
+//   useEffect(() => {
+//     if (queryData) {
+//       setFlashcards(queryData.cards);
+//     }
+//   }, [queryData]);
+
+//   const [addCard, { data }] = useMutation(UPDATE_FLASHCARD);
+
+
+
+
+// // import { QUERY_SINGLE_USER } from './utils/queries';
+
+
+// // Pass users array to the List component as a prop
+// export default function Flash() {
+//   // const [flashcards, setFlashcards] = useState(SAMPLE_FLASHCARDS)
+//   // Remove (SAMPLE_FLASHCARDS) and replace with empty array
+//   const [flashcards, setFlashcards] = useState(null);
+//   const [question, setQuestion] = useState('');
+//   const [answer, setAnswer] = useState('');
+
+
+//   const { loading, error, data: queryData } = useQuery(QUERY_FLASHCARDS);
+
 
 //   useEffect(() => {
 //     if (queryData) {
@@ -76,20 +103,20 @@
 //   );
 // }
 
-// // const SAMPLE_FLASHCARDS = [
-// //   {
-// //     id: 1,
-// //     question: "What's Q1?",
-// //     answer: 'A1'
-// //   },
-// //   {
-// //     id: 2,
-// //     question: 'Question 2?',
-// //     answer: 'Answer 2'
-// //   },
-// //   {
-// //     id: 3,
-// //     question: 'Q3?',
-// //     answer: 'Answer 3'
-// //   }
-// // ];
+// const SAMPLE_FLASHCARDS = [
+//   {
+//     id: 1,
+//     question: "What's Q1?",
+//     answer: 'A1'
+//   },
+//   {
+//     id: 2,
+//     question: 'Question 2?',
+//     answer: 'Answer 2'
+//   },
+//   {
+//     id: 3,
+//     question: 'Q3?',
+//     answer: 'Answer 3'
+//   }
+// ];

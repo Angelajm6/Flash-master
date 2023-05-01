@@ -1,14 +1,20 @@
 const { gql } = require('apollo-server-express');
+const { scalar } = require('graphql');
 
 const typeDefs = gql`
+scalar Date
+type MyType {
+   created: Date
+}
+
   type User {
-    name: String
-    subject: String
     _id: ID
+    name: String
     email: String
     password: String
     role: String
-    flashcards: [Flash]!
+    subject: String
+    flashcards: [Flash]! 
   }
 
   type Comment {
@@ -16,14 +22,14 @@ const typeDefs = gql`
     _id: ID
     commentText: String
     commentAuthor: String
-    createdAt: String
+    createdAt: Date
   }
 
   type Flash {
     _id: ID
     topic: String
     author: String
-    createdAt: String
+    createdAt: Date
     comments: [String]!
   }
 
@@ -40,26 +46,31 @@ type Checkout {
 
   type Auth {
     token: ID!
-    user: User
+    user: User!
   }
 
   type Query {
     users: [User]
     user(name: String!): User
-    flashcards(topic: String!, userId: ID): Flash
-    flash(userId: ID): Flash
+    flashcards(author: String!): Flash
+    flash(topic: String!): Flash
     comments(name: String): [Comment]
     comment(commentId: ID!): Comment
     donation(userId: ID, teacher: String!, amount: Int): Donation
     checkout(userId: ID, donation_amount: Int): Checkout
   }
 
+<<<<<<< HEAD
   type Mutation { 
-    addUser(name: String!, email: String!, password: String!): Auth
+    addUser(name: String!, subject: String!, role: String!, email: String!, password: String!): Auth
+=======
+  type Mutation {
+    addUser(name: String!, email: String!, password: String!, role: String!, subject: String!): Auth
+>>>>>>> main
     updateUser(name: String, subject: String, _id: ID, email: String, password: String, role: String, Flash: [String]!): User
     login(email: String!, password: String!): Auth
     addComment(commentId: ID!, commentText: String!, commentAuthor: String!): Comment
-    addFlashcard(flashName: String!, flashAuthor: String!, createdAt: String): Flash
+    addFlashcard(topic: String!, author: String!): Flash
     addDonation(userId: ID, teacher: String!, amount: Int): Donation 
   }
 `;
