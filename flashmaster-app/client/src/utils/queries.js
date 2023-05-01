@@ -54,13 +54,6 @@ query singleUser($name: String!)  {
     name
 
     role
-    Flash {
-      _id
-      topic
-      author
-      createdAt
-      comments
-    }
   }
 }
 `;
