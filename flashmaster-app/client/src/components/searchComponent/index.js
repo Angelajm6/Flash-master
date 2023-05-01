@@ -21,7 +21,6 @@ const SearchBar = () => {
     }
   };
 
-
   return (
     <div>
       <form onSubmit={handleSearch}>

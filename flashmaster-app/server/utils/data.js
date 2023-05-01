@@ -47,7 +47,6 @@ const ROLE = {
       { id: 108, name: ["Constitutional Convention", "The Bill of Rights", "Separation of Powers", "Legislative Branch", "Judicial Branch"], userId: 108 },
       { id: 109, name: ["Civil Rights", "Jim Crow", "Segregation", "Civil War", "Pearl Harbor"], userId: 109 },
       { id: 110, name: ["Nutrition", "Disease", "Viruses", "Bacteria", "SexEd"], userId: 110 },
-
     ],
     
   }

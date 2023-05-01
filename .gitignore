@@ -1,8 +1,12 @@
 ./node_modules
+<<<<<<< HEAD
 /package-lock.json
 <<<<<<< HEAD
 
 =======
+=======
+./package-lock.json
+>>>>>>> main
 /.env
 >>>>>>> main
 
