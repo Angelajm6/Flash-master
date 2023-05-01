@@ -51,13 +51,6 @@ query singleUser($name: String!)  {
     email
     subject
     role
-    Flash {
-      _id
-      topic
-      author
-      createdAt
-      comments
-    }
   }
 }
 `;
