@@ -14,24 +14,12 @@ const SearchBar = () => {
       },
     });
 
-<<<<<<< HEAD
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchName.trim()) {
       searchUser({ variables: { name: searchName } });
     }
   };
-=======
-    const handleSearch = (e) => {
-        e.preventDefault();
-        searchSingleUser({
-            variables: { userID: search },
-            onCompleted: (data) => {
-                setSearchedResults(data.users);
-            }
-        });
-    };
->>>>>>> main
 
   return (
     <div>
