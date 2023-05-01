@@ -1,10 +1,15 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import FlashCardList from './FlashCard/FlashCardList';
 
-export default function Flash() {
-  const [flashcards, setFlashcards] = useState(SAMPLE_FLASHCARDS);
+export default function FlashIndex() {
+  const [flashcards, setFlashcards] = useState(JSON.parse(localStorage.getItem('flashcards')) || SAMPLE_FLASHCARDS);
+
   const questionEl = useRef();
   const answerEl = useRef();
+
+  useEffect(() => {
+    localStorage.setItem('flashcards', JSON.stringify(flashcards));
+  }, [flashcards]);
 
   function handleSubmit(e) {
     e.preventDefault();
