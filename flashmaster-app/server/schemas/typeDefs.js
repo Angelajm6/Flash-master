@@ -1,6 +1,5 @@
 const { gql } = require('apollo-server-express');
 const { scalar } = require('graphql');
-scalar Date;
 
 const typeDefs = gql`
 scalar Date
