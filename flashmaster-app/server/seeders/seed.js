@@ -12,10 +12,13 @@ db.once('open', async () => {
     await Flash.deleteMany({});
 
     // bulk create each model
-    await User.insertMany(userSeeds);
-    await Flash.insertMany(flashSeeds);
-    await Comment.insertMany(commentSeeds);
+    const newUser = await User.insertMany(userSeeds);
+    const newFlash = await Flash.insertMany(flashSeeds);
+    const newComment = await Comment.insertMany(commentSeeds);
 
+    console.log(newUser);
+    console.log(newFlash);
+    console.log(newComment);
     console.log('all done!');
     process.exit(0);
   } catch (err) {
