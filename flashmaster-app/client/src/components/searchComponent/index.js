@@ -11,7 +11,7 @@ const Searchbar = () => {
     const handleSearch = (e) => {
         e.preventDefault();
         searchSingleUser({
-            variables: { search },
+            variables: { userID: search },
             onCompleted: (data) => {
                 setSearchedResults(data.users);
             }

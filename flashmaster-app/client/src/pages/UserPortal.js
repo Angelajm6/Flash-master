@@ -15,7 +15,11 @@ export default function UserPortal() {
 
     // If there is no `userId` in the URL as a parameter, execute the `QUERY_ME` query instead for the logged in user's information
     const { data, loading } = useQuery(
+<<<<<<< HEAD
+        userId ? QUERY_SINGLE_USER: {},
+=======
         userId ? QUERY_SINGLE_USER:
+>>>>>>> main
         {
             variables: { userId: userId },
         }

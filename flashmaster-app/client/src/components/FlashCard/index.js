@@ -5,6 +5,7 @@
 // import { useQuery, useMutation } from '@apollo/client';
 // // import './FlashCard/FlashCard.css';
 
+
 // // import { QUERY_SINGLE_USER } from './utils/queries';
 
 
@@ -16,7 +17,9 @@
 //   const [question, setQuestion] = useState('');
 //   const [answer, setAnswer] = useState('');
 
+
 //   const { loading, error, data: queryData } = useQuery(QUERY_FLASHCARDS);
+
 
 //   useEffect(() => {
 //     if (queryData) {
