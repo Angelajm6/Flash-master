@@ -1,4 +1,5 @@
 const { gql } = require('apollo-server-express');
+const { scalar } = require('graphql');
 
 const typeDefs = gql`
 scalar Date
@@ -7,13 +8,13 @@ type MyType {
 }
 
   type User {
-    name: String
-    subject: String
     _id: ID
+    name: String
     email: String
     password: String
     role: String
-    flashcards: [Flash]!
+    subject: String
+    flashcards: [Flash]! 
   }
 
   type Comment {
@@ -60,7 +61,7 @@ type Checkout {
   }
 
   type Mutation {
-    addUser(name: String!, email: String!, password: String!): Auth
+    addUser(name: String!, email: String!, password: String!, role: String!, subject: String!): Auth
     updateUser(name: String, subject: String, _id: ID, email: String, password: String, role: String, Flash: [String]!): User
     login(email: String!, password: String!): Auth
     addComment(commentId: ID!, commentText: String!, commentAuthor: String!): Comment
