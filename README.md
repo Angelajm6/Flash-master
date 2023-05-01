@@ -23,7 +23,7 @@ We wanted to create an accessible and educational website where users can search
 
 ## User Story
 
-As a teacher, I want to create flash card decks for my students to study with, update my study materials, respond to comments made by students, add a QR code to my portal, and view my donation balance so that I can provide an effective and immersive learning experience for my students. 
+As a teacher, I want to create flash card decks for my students to study with, update my study materials, respond to comments made by students, and view my donation balance so that I can provide an effective and immersive learning experience for my students. 
   
 As a student, I want to search for specific flash card decks, save my favorites, interact with other users' content, and have the option to support my favorite teachers through donations. 
 
@@ -36,7 +36,7 @@ THEN I am presented with the option to sign up or login as a student/teacher
 
 WHEN As a teacher I login to my portal
 
-THEN I can create flash card decks for my students to study with, add items to my wish list, update my study materials, respond to comments made by students, can add a QR code to my portal, and view my donation balance
+THEN I can create flash card decks for my students to study with, add items to my wish list, update my study materials, respond to comments made by students, and view my donation balance
 
 WHEN As a student I login to my portal
 
@@ -71,11 +71,11 @@ To use the website deployed through Heroku, use the link below:
 This website is used as an educational platform for educators and students to share and engage in academic resources. 
 Users can either login to their account as a teacher or student and create flash card decks on the subjects they are currently interested in. By entering the keywords of a subject into the search engine, students can search for specific topics and the title of a subject, teacher's name, and flash deck will be generated on the page. 
 
-Students are able to save their favorite flash card decks into their collections viewed on their Student Portal and comment under these study decks for clarification. Students are also given the option to donate to their favorite teacher's wishlist. Teachers are able to create, edit, and delete their flash cards. Teachers can generate a QR code to share their content on Flash Master with their students. They can also view their wishlist balance on their donation's page. 
+Students are able to save their favorite flash card decks into their collections viewed on their Student Portal and comment under these study decks for clarification. Students are also given the option to donate to their favorite teacher's wishlist. Teachers are able to create, edit, and delete their flash cards. They can also view their wishlist balance on their donation's page. 
 
 All users can join Flash Master with absolutely no cost and can click on the "Word of the Day" button to generate a new word and its definition every time they login. 
 
-This project was developed as part of a full-stack development course and implements Apollo, MERN, GraphQL, CSS libraries, JWT, Stripe, and third-party APIs as required technologies. 
+This project was developed as part of a full-stack development course and implements Apollo, MERN, GraphQL, CSS libraries, JWT, Stripe, and Word of the Day API as required technologies. 
 
 
 ## License
@@ -84,7 +84,7 @@ This application is licensed under the MIT License.
 
 ## Contribution
 
-Feel free to contribute to better improve this application. Fork the repository to your GitHub account. Clone the forked repository to your local machine. Create a new branch for your changes and push them to your forked repository. Then submit a pull request to the original repository.
+Feel free to contribute to better improve this application! Fork the repository to your GitHub account. Clone the forked repository to your local machine. Create a new branch for your changes and push them to your forked repository. Then submit a pull request to the original repository.
 
 ## Credits
 
