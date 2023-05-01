@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+<<<<<<< HEAD
 //import './assets/style.jsx';
+=======
+>>>>>>> main
 //This imports ApolloClient, InMemory Cache, ApolloProvider, and createHttpLink
 import {
   ApolloClient,
@@ -29,8 +32,9 @@ import Flash from './components/FlashCard/index';
 // import Collections from '../src/pages/Student/Collections';
 
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: 'http://localhost:3001/graphql',
 });
+
 //function that grabs token from database to check if the user is authorized 
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem('id_token');

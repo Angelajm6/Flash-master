@@ -2,12 +2,12 @@ const { Schema, model }= require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
 const flashSchema = new Schema({
-    flashName: {
+    topic: {
         type: String,
         required: true,
         trim: true,
     },
-    flashAuthor: {
+    author: {
         type: String,
         required: true,
         ref: 'user',
