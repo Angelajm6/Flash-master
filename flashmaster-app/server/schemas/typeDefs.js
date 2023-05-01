@@ -1,5 +1,6 @@
 const { gql } = require('apollo-server-express');
 
+
 const typeDefs = gql`
   type User {
     name: String
@@ -16,14 +17,14 @@ const typeDefs = gql`
     _id: ID
     commentText: String
     commentAuthor: String
-    createdAt: String
+    createdAt: Date
   }
 
   type Flash {
     _id: ID
     topic: String
     author: String
-    createdAt: String
+    createdAt: Date
     comments: [String]!
   }
 
