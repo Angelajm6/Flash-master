@@ -76,6 +76,7 @@ export default function Flash() {
   );
 }
 
+
 // const SAMPLE_FLASHCARDS = [
 //   {
 //     id: 1,

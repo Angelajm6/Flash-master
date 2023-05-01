@@ -1,5 +1,5 @@
 import React, { useState} from 'react';
-import Header from '../components/Header/index'
+
 
 function Home() {
     const [wordOfTheDay, setWordOfTheDay] = useState('');
@@ -23,7 +23,6 @@ function Home() {
 
     return (
         <div className='home'>
-            <Header />
             <button onClick={handleClick}>Generate Word of The Day</button>
             <h1>{wordOfTheDay}:</h1>
             <p>{definition}</p>

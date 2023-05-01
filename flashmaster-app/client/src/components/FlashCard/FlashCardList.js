@@ -9,5 +9,8 @@ export default function FlashCardList({ flashcards }) {
         })}
       
     </div>
-  )
+  );
 }
+
+
+

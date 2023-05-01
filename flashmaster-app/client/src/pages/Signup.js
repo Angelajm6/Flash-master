@@ -9,6 +9,7 @@ const SignUp = () => {
     name: '',
     email: '',
     password: '',
+    subject: '',
     role: 'Teacher',
   });
 
@@ -26,18 +27,18 @@ const SignUp = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     console.log(formState);
-
+  
     try {
       const { data } = await addUser({
-        variable: { ...formState },
+        variables: { ...formState },
       });
-
-      Auth.login(data.addProfile.token);
+  
+      Auth.login(data.addUser.token);
     } catch (e) {
       console.error(e);
     }
   };
-
+  
   return (
     <main className="flex-row justify-center mb-4">
       <div className="col-12 col-lg-10">
@@ -74,6 +75,14 @@ const SignUp = () => {
                   type="password"
                   value={formState.password}
                   onChange={handleChange}
+                />
+                <input
+                className="form-input"
+                placeholder="Subject"
+                name="subject"
+                type="subject"
+                value={formState.subject}
+                onChange={handleChange}
                 />
                 <label htmlFor="role">I am a:</label>
                 <select

@@ -40,7 +40,7 @@ type Checkout {
 
   type Auth {
     token: ID!
-    user: User
+    user: User!
   }
 
   type Query {
@@ -55,7 +55,7 @@ type Checkout {
   }
 
   type Mutation { 
-    addUser(name: String!, email: String!, password: String!): Auth
+    addUser(name: String!, subject: String!, role: String!, email: String!, password: String!): Auth
     updateUser(name: String, subject: String, _id: ID, email: String, password: String, role: String, Flash: [String]!): User
     login(email: String!, password: String!): Auth
     addComment(commentId: ID!, commentText: String!, commentAuthor: String!): Comment
