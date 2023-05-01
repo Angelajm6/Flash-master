@@ -22,15 +22,9 @@ const flashSchema = new Schema({
         answer: {type: String, required: true}
     }],
     
-    //     toJSON: {
-    //     virtuals: true,
-    // },
-    // id: false,
 });
 
-// flashSchema.virtual('cardCount').get(function () {
-//     return this.flashCard.length;
-// });
+
 
 const Flash = model('flash', flashSchema);
 

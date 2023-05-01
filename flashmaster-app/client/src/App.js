@@ -1,26 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-//import './assets/style.jsx';
-//This imports ApolloClient, InMemory Cache, ApolloProvider, and createHttpLink
 import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
   createHttpLink,
 } from '@apollo/client';
-//This is importing setContext
+
 import { setContext } from '@apollo/client/link/context';
-//This imports BrowserRouter for routing to other pages in the application
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
-import Home from './pages/Home'; //imports home page
+import Home from './pages/Home'; 
 import Teacher from './pages/Teacher/Teacher'; 
-import Student from './pages/Student/Student' //imports student file
-import Signup from './pages/Signup'; //imports signup page
-import Login from './pages/Login'; //imports login
-import Header from './components/Header'; //imports header component
-import Footer from './components/Footer'; //imports footer component
+import Student from './pages/Student/Student' 
+import Signup from './pages/Signup'; 
+import Login from './pages/Login';
+import Header from './components/Header'; 
+import Footer from './components/Footer'; 
 
 
 
@@ -28,7 +26,7 @@ const httpLink = createHttpLink({
   uri: '/graphql',
 });
 
-//function that grabs token from database to check if the user is authorized 
+ 
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem('id_token');
   return {
@@ -38,7 +36,7 @@ const authLink = setContext((_, { headers }) => {
     },
   };
 });
-//creating a new instance of apollo client
+
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),

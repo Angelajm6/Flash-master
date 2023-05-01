@@ -21,6 +21,7 @@ const SearchBar = () => {
     }
   };
 
+
   return (
     <div>
       <form onSubmit={handleSearch}>
@@ -48,4 +49,6 @@ const SearchBar = () => {
   );
 };
 
+
 export default SearchBar;
+

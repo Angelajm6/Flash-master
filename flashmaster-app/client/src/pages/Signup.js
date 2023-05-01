@@ -32,7 +32,7 @@ const SignUp = () => {
       const { data } = await addUser({
         variables: { ...formState },
       });
-  
+
       Auth.login(data.addUser.token);
     } catch (e) {
       console.error(e);
@@ -83,6 +83,14 @@ const SignUp = () => {
                   type="password"
                   value={formState.password}
                   onChange={handleChange}
+                />
+                <input
+                className="form-input"
+                placeholder="Subject"
+                name="subject"
+                type="subject"
+                value={formState.subject}
+                onChange={handleChange}
                 />
                 <label htmlFor="role">I am a:</label>
                 <select

@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from 'react';
 import FlashCardList from './FlashCardList';
 import { QUERY_ALL_FLASH } from '../../utils/queries';
@@ -6,10 +7,15 @@ import { useQuery, useMutation } from '@apollo/client';
 // import './FlashCard/FlashCard.css';
 
 
+
 // // import { QUERY_SINGLE_USER } from './utils/queries';
 
 
-  const { loading, error, data: queryData } = useQuery(QUERY_ALL_FLASH);
+
+  //const { loading, error, data: queryData } = useQuery(QUERY_ALL_FLASH);
+
+  //const { loading, error, data: queryData } = useQuery(QUERY_ALL_FLASH);
+
 
 
 //   const { loading, error, data: queryData } = useQuery(QUERY_FLASHCARDS);
@@ -74,6 +80,7 @@ import { useQuery, useMutation } from '@apollo/client';
 // }
 
 
+
 // const SAMPLE_FLASHCARDS = [
 //   {
 //     id: 1,
@@ -91,3 +98,4 @@ import { useQuery, useMutation } from '@apollo/client';
 //     answer: 'Answer 3'
 //   }
 // ];
+

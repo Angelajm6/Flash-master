@@ -1,9 +1,6 @@
 import { gql } from '@apollo/client';
 
 
-//import { authorizedbuyersmarketplace } from 'googleapis/build/src/apis/authorizedbuyersmarketplace';
-
-
 export const QUERY_USERS =  gql`
 query allUsers {
   users {
