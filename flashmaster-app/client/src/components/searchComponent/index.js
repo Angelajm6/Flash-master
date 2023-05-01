@@ -48,8 +48,4 @@ const SearchBar = () => {
   );
 };
 
-<<<<<<< HEAD
 export default SearchBar;
-=======
-export default Searchbar;
->>>>>>> main
