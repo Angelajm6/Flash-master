@@ -84,14 +84,6 @@ const SignUp = () => {
                   value={formState.password}
                   onChange={handleChange}
                 />
-                <input
-                className="form-input"
-                placeholder="Subject"
-                name="subject"
-                type="subject"
-                value={formState.subject}
-                onChange={handleChange}
-                />
                 <label htmlFor="role">I am a:</label>
                 <select
                   className="form-input"
