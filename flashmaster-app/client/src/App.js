@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { ChakraProvider } from '@chakra-ui/react';
-import './assets/style.js';
-//import './assets/style.jsx';
 //This imports ApolloClient, InMemory Cache, ApolloProvider, and createHttpLink
 import {
   ApolloClient,
@@ -31,8 +28,9 @@ import Flash from './components/FlashCard/index';
 // import Collections from '../src/pages/Student/Collections';
 
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: 'http://localhost:3001/graphql',
 });
+
 //function that grabs token from database to check if the user is authorized 
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem('id_token');
@@ -60,7 +58,6 @@ function App() {
   return (
     
     <ApolloProvider client={client}>
-      <ChakraProvider>
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
@@ -102,7 +99,6 @@ function App() {
           <Footer />
         </div>
       </Router>
-      </ChakraProvider>
     </ApolloProvider>
     
   );

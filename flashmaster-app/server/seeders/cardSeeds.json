@@ -1,0 +1,37 @@
+[
+    {"flashName": "Math 101",
+    "flashAuthor": "Allen Barber",
+    "topic": "Math",
+    "id": 1,
+    "flashCard": [
+        {
+            "question": "What's 1+1?",
+            "answer": "2"
+        },
+        {
+            "question": "What's 2+1?",
+            "answer": "3"
+        },
+        {
+            "question": "What's 3+455?",
+            "answer": "458"
+        },
+        {
+            "question": "What's 100-101?",
+            "answer": "-1"
+        },
+        {
+            "question": "What's 21x2?",
+            "answer": "42"
+        },
+        {
+            "question": "What's 50/5?",
+            "answer": "10"
+        },
+        {
+            "question": "What's 20+2?",
+            "answer": "22"
+        }
+    ]
+}
+]
