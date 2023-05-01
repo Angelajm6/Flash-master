@@ -52,7 +52,7 @@ query singleUser($name: String!)  {
   user(name: $name) {
     _id
     name
-
+    subject
     role
   }
 }

@@ -13,6 +13,7 @@ import { setContext } from '@apollo/client/link/context';
 //This imports BrowserRouter for routing to other pages in the application
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+
 import Home from './pages/Home'; //imports home page
 import Teacher from './pages/Teacher/Teacher'; 
 import Student from './pages/Student/Student' //imports student file
@@ -20,6 +21,7 @@ import Signup from './pages/Signup'; //imports signup page
 import Login from './pages/Login'; //imports login
 import Header from './components/Header'; //imports header component
 import Footer from './components/Footer'; //imports footer component
+
 
 
 const httpLink = createHttpLink({
@@ -82,7 +84,11 @@ function App() {
               <Route
                 path="/me"
                 element={
-                  userRole === 'admin' ? <Teacher /> : <Student />
+                  userRole === 'teacher' ? (
+                    <Teacher />
+                  ) : (
+                    <Student />
+                  )
                 }
               />
             </Routes>
