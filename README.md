@@ -66,6 +66,8 @@ npm run start
 ```
 To use the website deployed through Heroku, use the link below:
 
+https://flashmaster-app.herokuapp.com/ 
+
 ## Usage
 
 This website is used as an educational platform for educators and students to share and engage in academic resources. 
