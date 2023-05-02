@@ -1,11 +1,4 @@
 import { gql } from '@apollo/client';
-<<<<<<< HEAD
-=======
-
-
-//import { authorizedbuyersmarketplace } from 'googleapis/build/src/apis/authorizedbuyersmarketplace';
-
->>>>>>> fe8df83ce8b0587b0703aad09e635bb0a33c801b
 
 export const QUERY_USERS =  gql`
 query allUsers {
@@ -55,7 +48,6 @@ query singleUser($name: String!)  {
   user(name: $name) {
     _id
     name
-<<<<<<< HEAD
     email
     subject
     role
@@ -66,10 +58,6 @@ query singleUser($name: String!)  {
       createdAt
       comments
     }
-=======
-
-    role
->>>>>>> fe8df83ce8b0587b0703aad09e635bb0a33c801b
   }
 }
 `;
