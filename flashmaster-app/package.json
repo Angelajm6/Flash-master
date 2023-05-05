@@ -14,11 +14,15 @@
     },
     "buildpacks": [
       {
-        "url": "heroku/nodejs"
+        "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
       },
       {
-        "url": "https://github.com/heroku/heroku-buildpack-static.git"
+        "url": "https://github.com/mars/create-react-app-buildpack"
+      },
+      {
+        "url": "heroku/nodejs"
       }
+      
     ]
   ,
   "repository": {
