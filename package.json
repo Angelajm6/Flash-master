@@ -11,20 +11,18 @@
     "seed": "cd flashmaster-app/server && npm run seed",
     "build": "cd flashmaster-app/client && npm install && npm run build && cd ../ && npm install",
     "heroku-postbuild": "npm run build"
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
     },
-    "buildpacks": [
-      {
-        "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
-      },
-      {
-        "url": "https://github.com/mars/create-react-app-buildpack"
-      },
-      {
-        "url": "heroku/nodejs"
-      }
-      
-    ]
-  ,
+    {
+      "url": "https://github.com/mars/create-react-app-buildpack"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Angelajm6/Flash-master.git"
