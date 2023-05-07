@@ -9,7 +9,7 @@
     "develop": "concurrently \"cd flashmaster-app/server && npm run watch\" \"cd flashmaster-app/client && npm start\"",
     "install": "cd flashmaster-app/server && npm i && cd ../client && npm i",
     "seed": "cd flashmaster-app/server && npm run seed",
-    "build": "cd flashmaster-app/client && npm install && npm run build && cd ../ && npm install",
+    "build": "cd flashmaster-app/client && npm run build",
     "heroku-postbuild": "npm run build"
   },
   "buildpacks": [
@@ -29,5 +29,10 @@
   "devDependencies": {
     "concurrently": "^5.3.0",
     "dotenv": "^16.0.3"
+  },
+  "dependencies": {
+    "@wry/context": "^0.7.2",
+    "@wry/equality": "^0.5.5",
+    "react-dotenv": "^0.1.3"
   }
 }
